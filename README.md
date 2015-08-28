@@ -7,7 +7,7 @@ Our web application allows registered users to save beers that they try and post
 Team members: Ashley Baird, Brian Johnson, Thomas Kolasa, David Wightman, & Anthony Zhu
 
 
-The application uses Ruby on Rails and the BreweryDB API.
+The application uses Ruby on Rails and the <a href="http://www.brewerydb.com/developers">BreweryDB API</a>.
 
 
 https://trello.com/wdiproject3 (private)
