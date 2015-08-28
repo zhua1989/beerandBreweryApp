@@ -2,7 +2,11 @@
 
 ### Description
 Our web application allows registered users to save beers that they try and post their opinions about the beers. 
+
+
 Team members: Ashley Baird, Brian Johnson, Thomas Kolasa, David Wightman, & Anthony Zhu
+
+
 The application uses Ruby on Rails and the BreweryDB API.
 https://trello.com/wdiproject3 (private)
 
@@ -18,6 +22,19 @@ A user will be able to log in, look up beers, save beers to her account, and mak
 
 | HTTP Verb  | Path            | Controller#Action | Used for              |
 | ---------- | --------------- | ----------------- | --------------------- |
+| Sessions                                                                 |
+| Get        | /sessions/new   | sessions#new      | form for login        |
+| Post       | /sessions       | sessions#create   | create session        |
+| DELETE     | /sessions/:id   | sessions#destroy  | logout of session     |
+| Users                                                                    |
+| GET        | /users          | users#index       | displays users        |
+| GET        | /users/new      | users#new         | form for adding user  |
+| POST       | /users          | users#create      | create new user       |
+| GET        | /users/:id      | users#show        | display specific user |
+| GET        | /users/:id/edit | users#edit        | form for editing user |
+| PUT        | /users/:id      | users#update      | update a user         |
+| DELETE     | /users/:id      | users#destroy     | delete a user         |
+| Beers                                                                    |
 | GET        | /beers          | beers#index       | displays beers        |
 | GET        | /beers/new      | beers#new         | form for adding beer  |
 | POST       | /beers          | beers#create      | create new beer       |
