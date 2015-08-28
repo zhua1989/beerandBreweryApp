@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+  <h1>Log In</h1>
+
+  <%= form_tag "/sessions" do %>
+  Enter your email
+  <%= email_field_tag :email %>
+  Enter PW:
+  <%= password_field_tag :password %>
+  <%= submit_tag "log in" %>
+  <% end %>
+
+
+</body>
+</html>
