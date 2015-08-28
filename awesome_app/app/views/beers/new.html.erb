@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Search</title>
+</head>
+<body>
+	<div class="header">
+		<h1>Here are your searches!</h1>
+	</div>
+	<div class="search">
+		<ul>
+			<% @beer.each do |beer| %>
+			<input type="radio" name="name" value="<%= beer.name %>"> <%= beer.name %> <br>
+		</ul>
+	</div> 
+
+</body>
+</html>
