@@ -18,7 +18,7 @@ A user will be able to log in, look up beers, save beers to her account, and mak
 
 #### Front-end Wireframes
 
-
+![alt tag](https://github.com/zhua1989/beerForumApp/blob/master/beerForumApp.pdf)
 
 #### Routes
 
