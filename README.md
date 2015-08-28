@@ -36,13 +36,13 @@ A user will be able to log in, look up beers, save beers to her account, and mak
 | GET        | /users/:id/edit | users#edit        | form for editing user |
 | PUT        | /users/:id      | users#update      | update a user         |
 | DELETE     | /users/:id      | users#destroy     | delete a user         |
+| **Search**                                                               |
+| GET        | /search         | search#index      | search API            |
 | **Beers**                                                                |
 | GET        | /beers          | beers#index       | displays beers        |
 | GET        | /beers/new      | beers#new         | form for adding beer  |
 | POST       | /beers          | beers#create      | create new beer       |
 | GET        | /beers/:id      | beers#show        | display specific beer |
-| GET        | /beers/:id/edit | beers#edit        | form for editing beer |
-| PUT        | /beers/:id      | beers#update      | update a beer         |
 | DELETE     | /beers/:id      | beers#destroy     | delete a beer         |
 
 
