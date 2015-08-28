@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
   def new
 
 
+
   end
 
 
@@ -19,7 +20,10 @@ class SessionsController < ApplicationController
 
     #logged in means a user_id is stored in a session
   end
-
+  def destroy
+    session[:user_id] = nil
+    redirect_to root_path
+  end
   
 
 end
