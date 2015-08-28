@@ -1,0 +1,2 @@
+class BeersController < ActivationController
+end
