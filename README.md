@@ -8,6 +8,8 @@ Team members: Ashley Baird, Brian Johnson, Thomas Kolasa, David Wightman, & Anth
 
 
 The application uses Ruby on Rails and the BreweryDB API.
+
+
 https://trello.com/wdiproject3 (private)
 
 ### Artifacts
@@ -22,11 +24,11 @@ A user will be able to log in, look up beers, save beers to her account, and mak
 
 | HTTP Verb  | Path            | Controller#Action | Used for              |
 | ---------- | --------------- | ----------------- | --------------------- |
-| Sessions                                                                 |
+| **Sessions**                                                             |
 | Get        | /sessions/new   | sessions#new      | form for login        |
 | Post       | /sessions       | sessions#create   | create session        |
 | DELETE     | /sessions/:id   | sessions#destroy  | logout of session     |
-| Users                                                                    |
+| **Users**                                                                |
 | GET        | /users          | users#index       | displays users        |
 | GET        | /users/new      | users#new         | form for adding user  |
 | POST       | /users          | users#create      | create new user       |
@@ -34,7 +36,7 @@ A user will be able to log in, look up beers, save beers to her account, and mak
 | GET        | /users/:id/edit | users#edit        | form for editing user |
 | PUT        | /users/:id      | users#update      | update a user         |
 | DELETE     | /users/:id      | users#destroy     | delete a user         |
-| Beers                                                                    |
+| **Beers**                                                                |
 | GET        | /beers          | beers#index       | displays beers        |
 | GET        | /beers/new      | beers#new         | form for adding beer  |
 | POST       | /beers          | beers#create      | create new beer       |
@@ -42,8 +44,6 @@ A user will be able to log in, look up beers, save beers to her account, and mak
 | GET        | /beers/:id/edit | beers#edit        | form for editing beer |
 | PUT        | /beers/:id      | beers#update      | update a beer         |
 | DELETE     | /beers/:id      | beers#destroy     | delete a beer         |
-
-(more routes)
 
 
 #### Database Design (ERD/Data Model Diagrams)
