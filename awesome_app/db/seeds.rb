@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create({name:"brian", password_digest:"12345", image_url:"http://i.giphy.com/nMNzebXyK6fkY.gif"})
-User.create({name:"ashley", password_digest:"23456", image_url:"http://i.giphy.com/sLGSt1R30Api0.gif"})
+User.create({name:"brian", password:"12345", image_url:"http://i.giphy.com/nMNzebXyK6fkY.gif"})
+User.create({name:"ashley", password:"23456", image_url:"http://i.giphy.com/sLGSt1R30Api0.gif"})
 
 Beer.create({name:"blue moon", description:"tasty"})
 Beer.create({name:"anchor steam", description:"steamy"})
