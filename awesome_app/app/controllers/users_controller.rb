@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+	
     
   def new
     @user = User.new
@@ -7,7 +7,8 @@ class UsersController < ApplicationController
 
 
   def create
-    new_user = User.create(user_params)
+    new_user = User.create(name: params[:name], password: params[:password], image_url: params[:image_url])
+
     redirect_to root_path
   end
 
@@ -21,16 +22,18 @@ class UsersController < ApplicationController
         redirect_to user_path(actual_user)
       end
     end
-  end
 
 
   private
 
 
-  def user_params
-    params.require(:user).permit(:name, :password, :image_url)
+  # def user_params
+  #   params.require(:user).permit(:name, :password, :image_url)
+  # end
+
+
+  
+
+
   end
 
-
-
-end

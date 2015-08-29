@@ -1,2 +1,39 @@
-<h1>User show!</h1>
-<p>Username: <%= User.username %></p>
+<html>
+<head>
+	<title>Profile Page</title>
+</head>
+<body>
+	<div class="header">
+		<h1>Welcome <%= @current_user.name %> !</h1>
+	</div>
+    
+    <div class="content">
+		<h2>Here are your beers</h2>
+		 <% @beers.each do |beer| %>
+		<div class="list">
+				<h3> <%= beer.name %> </h3>
+				<%= link_to 'Delete', beer_path, method: :delete %>
+				<ul>
+					<li><%= beer.tastings %> </li>	
+				</ul>
+
+				<%= form_tag "/beer" do %>
+					<%= text_field_tag :tasting_notes %>
+					<%= submit_tag 'Submit Tasting' %>
+				<% end %>
+			<% end %>
+		</div>
+    </div>
+
+    <div class="find">
+    	<%= form_tag "/beers/search", method: :GET do %>
+    		Add a beer!
+    		<%= text_field_tag :search %>
+    		<%= submit_tag %>
+    	<% end %>
+    </div
+
+</body>
+</html>
+
+

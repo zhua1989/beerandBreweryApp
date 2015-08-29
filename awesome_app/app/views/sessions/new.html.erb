@@ -7,8 +7,8 @@
   <h1>Log In</h1>
 
   <%= form_tag "/sessions" do %>
-  Enter your email
-  <%= email_field_tag :email %>
+  Enter your name
+  <%= text_field_tag :name %>
   Enter PW:
   <%= password_field_tag :password %>
   <%= submit_tag "log in" %>

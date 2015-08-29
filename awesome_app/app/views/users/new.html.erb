@@ -1,6 +1,6 @@
 <h2>Add a new account</h2>
 <h3>Enter a username and password to get started</h3>
-<%= form_tag('/users/create', method: :post) %>
+<%= form_tag('/users', method: :post) %>
 <%= text_field_tag :name, nil, placeholder: "user name" %>
 <%= text_field_tag :image_url, nil, placeholder: "image_url" %>
 <%= password_field_tag :password, nil, placeholder: "password" %>
