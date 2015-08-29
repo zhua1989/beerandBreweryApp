@@ -4,7 +4,15 @@
 </head>
 <body>
 	<div class="header">
-		<h1>Welcome <%= @current_user.name %> !</h1>
+		<h1>Welcome <%= @current_user.name %>!</h1>
+		<img src="<%= @current_user.image_url %>">
+
+		<%= link_to "Logout", sessions_path, method: :delete %>
+		<h6>Change your avatar</h6>
+			<%= form_tag(user_path, method: "put") do %>
+				<%= text_field_tag :image %>
+				<%= submit_tag "Change" %>
+			<% end %>
 	</div>
     
     <div class="content">
@@ -14,7 +22,9 @@
 				<h3> <%= beer.name %> </h3>
 				<%= link_to 'Delete', beer_path, method: :delete %>
 				<ul>
-					<li><%= beer.tastings %> </li>	
+					<% beer.tastings.each do |taste| %> 
+						<li><%= taste.tasting_notes %> </li>
+					<% end %>	
 				</ul>
 
 				<%= form_tag "/beer" do %>
@@ -31,7 +41,7 @@
     		<%= text_field_tag :search %>
     		<%= submit_tag %>
     	<% end %>
-    </div
+    </div>
 
 </body>
 </html>
