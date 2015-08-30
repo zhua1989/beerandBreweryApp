@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
 
   def create
-    new_user = User.create(name: params[:name], password: params[:password], image_url: params[:image_url])
+    new_user = User.create(name: params[:name].downcase, password: params[:password], image_url: params[:image_url])
 
     redirect_to user_path
   end
