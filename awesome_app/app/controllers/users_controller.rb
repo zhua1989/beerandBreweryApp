@@ -1,9 +1,13 @@
+require ('pry')
+
+
 class UsersController < ApplicationController
 	
     ## Action for adding a new user for new form
   def new
     @user = User.new
   end
+
 
     ## Action for creating a new user
   def create
@@ -12,7 +16,13 @@ class UsersController < ApplicationController
   	if (already_taken)
   		flash[:error] = "Username is already taken"
   		## if the username is present, then redirect to the login page
+<<<<<<< HEAD
   		redirect_to new_user_path
+=======
+  		redirect_to sessions_new_path
+      binding.pry
+
+>>>>>>> resolved
   	else 
   		## If the username is not present, then it creates their account
 	    @new_user = User.create(user_params)
