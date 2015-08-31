@@ -1,3 +1,6 @@
+require ('pry')
+
+
 class UsersController < ApplicationController
 	
     ## Action for adding a new user for new form
@@ -5,21 +8,20 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+
     ## Action for creating a new user
   def create
   	## check if the username is already in the database
-  	already_taken = User.find_by({name: params[:user][:name]})
-  	if (already_taken)
-  		flash[:error] = "Username is already taken"
-  		## if the username is present, then redirect to the login page
-  		redirect_to new_user_path
-  	else 
-  		## If the username is not present, then it creates their account
-	    @new_user = User.create(user_params)
-	 	user = User.find_by({name: params[:user][:name]})
+	     @user = User.create(user_params)
+    if @user.errors.any?
+    #   ## if the username is present, then redirect to the login page
+      render template: "/users/new"
+    else 
+      ## If the username is not present, then it creates their account
+	 	   user = User.find_by({name: params[:user][:name]})
 	 	## Start the session for the user
-		session[:user_id] = user.id
-		redirect_to user_path(user)
+		   session[:user_id] = user.id
+		   redirect_to user_path(user)
 	end
   end
 
