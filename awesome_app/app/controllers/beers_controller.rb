@@ -16,16 +16,16 @@ class BeersController < ApplicationController
     filter = params[:filter]
     beersUserTasted = User.find(session[:user_id]).tastings.pluck("beer_api_id")
 
-    if filter == "topResults"
+    if filter == "Top Results"
       @beers = request.data.take(15)
       # @alreadyTasted creates an array of true/false based on whether the beer is already User.tastings
       @alreadyTasted = @beers.map { |beer| beersUserTasted.include?(beer.id) }
-    elsif filter == "onlyName"
+    elsif filter == "Only Name"
       # ternary operatory returns true if the the userQuery is found in the beer.name
       matches = request.data.select { |beer| beer.name.chomp.downcase.match(userQuery.downcase) ? true : false}
       @beers = matches.take(15)
       @alreadyTasted = @beers.map { |beer| beersUserTasted.include?(beer.id) }
-    elsif filter == "onlyDescription"
+    elsif filter == "Only Description"
       # ternary operatory returns true if the the userQuery is found in the beer.description
       matches = request.data.select { |beer| beer.description.chomp.downcase.match(userQuery.downcase) ? true : false}
       @beers = matches.take(15)
