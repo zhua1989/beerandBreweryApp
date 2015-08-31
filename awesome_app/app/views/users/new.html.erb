@@ -1,18 +1,21 @@
 <h2>Add a new account</h2>
 <h3>Enter a username and password to get started</h3>
 
-		<%= form_for (@user) do |f| %>
-		  <%= f.label :name%>
-		  <%= f.text_field :name%>
-		  <%= f.label :image_url%>
-		  <%= f.text_field :image_url%>
-		  <%= f.label :password%>
-		  <%= f.password_field :password%>
-		  <%= f.label :confirm_password%>
-		  <%= f.password_field :confirm_password%>
-		  <%=f.submit%>
+<%= form_for (@user) do |f| %>
 
-		<%= flash[:error] %>
-	
+        <% if @user.errors.any? %>
+       <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+        <% end %>        
+          <%= f.label :name%>
+          <%= f.text_field :name%>
+          <%= f.label :image_url%>
+          <%= f.text_field :image_url%>
+          <%= f.label :password%>
+          <%= f.password_field :password%>
+          <%= f.label :confirm_password%>
+          <%= f.password_field :confirm_password%>
+          <%=f.submit%>
 
 <% end %>

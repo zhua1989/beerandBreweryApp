@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :comments
   has_many :beers, through: :tastings
 
-validates_uniqueness_of :name
+  validates :name, uniqueness: true
 
 
 end
