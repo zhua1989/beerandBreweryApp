@@ -3878,3 +3878,1916 @@ Started GET "/sessions/new" for ::1 at 2015-08-31 11:15:02 -0400
 Processing by SessionsController#new as HTML
   Rendered sessions/new.html.erb within layouts/application (1.0ms)
 Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=high+life&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 12:07:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"high life", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 5061ms (Views: 157.7ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/beers" for ::1 at 2015-08-31 12:08:18 -0400
+Processing by BeersController#create as HTML
+  Parameters: {"FW35fB_name"=>"High Life Light", "FW35fB_id"=>"FW35fB", "FW35fB_description"=>"Introduced in 1994, Miller High Life Light is the low-calorie version of Miller High Life, offering the same unpretentious attitude with fewer calories.", "voS2xG_name"=>"Miller High Life", "voS2xG_id"=>"voS2xG", "voS2xG_description"=>"Miller High Life, the \"champagne of beers,\" dates to 1903. A classic American style lager, Miller High Life is known for its consistently crisp, smooth taste and iconic clear-glass bottle. Miller High Life embraces its rich heritage and is known by its drinkers as an authentic, unpretentious beer. It's common sense in a bottle.", "BbOui2_name"=>"Life’s A Beach", "BbOui2_id"=>"BbOui2", "BbOui2_description"=>"", "veedjF_name"=>"Lübzer Life", "veedjF_id"=>"veedjF", "veedjF_description"=>"", "2vxsGp_name"=>"Low Life", "2vxsGp_id"=>"2vxsGp", "2vxsGp_description"=>"A clever woman once said; ‘fair is foul and foul is fair’. On that note we threw in a young, unacknowledged hoppy pilsner gave it a limp, wrinkly flavor and finished it off with an insulting high price that will give you a foul feeling in your mouth. That’s why we name Evil Twin Brewing’s Low Life the Golddigger of Beers.", "B0g4dM_name"=>"Range Life", "B0g4dM_id"=>"B0g4dM", "B0g4dM_description"=>"Each batch of our wheat beer is brewed with an evolving hopping scheme. Our new batch of Range Life features Comet hops, a hop with a wild side. This feral hop imparts an especially dank and citrusy character to a lush, wheat-filled body.", "ANZaTk_name"=>"NICE LIFE", "ANZaTk_id"=>"ANZaTk", "ANZaTk_description"=>"", "Pg2px4_name"=>"Half Life", "Pg2px4_id"=>"Pg2px4", "Pg2px4_description"=>"", "sl1qA8_name"=>"Sweet As Pacific Ale", "sl1qA8_id"=>"sl1qA8", "sl1qA8_description"=>"Why name a beer \"Sweet As\"? This beer is brewed with 100% New Zealand Hops. In New Zealand, \"Sweet As \" can be used to describe a fishing hole, a ski run, a sunset glowing behind a mountain or a set of legs that happen to be walking in front of you. Sweet As means \"Really Good.\" Now, let your imagination go wild and think how often you could say Sweet As to describe your GoodLife.\r\n\r\nWe make this beer to say, \"Cheers to all the Sweet As experiences in life.\"Try this beer and good luck not having another...... it's Sweet As!\r\n\r\nMalt: NW Two Row, White Wheat, Vienna, Carafoam\r\nHops: Pacifica", "V4keJZ_name"=>"Comatose", "V4keJZ_id"=>"V4keJZ", "V4keJZ_description"=>"Mother Nature's seasons are amazing, where all her creations flux between an existence in winter's comatose state, spring's colorful fling, summer's hot dance, and fall's laid back swing. The creative juices of musicians jump from an unconscious, winter mindset spuring you to think concerts, road trips and campsites. One sip of this beer will get your blood flowing as you jam to your favorite tunes!\r\n\r\nDisclaimer: We don't recommend hanging upside down in a tree, you're not Eddie... It seems fitting to chill in a hammock while listening to great music and sipping a triple-dry hopped, Imperial IPA -- Music for the taste buds!\r\n\r\nMalt: High Color Pale, Bonlander Munich, Carafoam\r\nHops: Bravo, Zythos, Zeus, Chinook, Cascade, Summit", "7OTST0_name"=>"Scottish Heart", "7OTST0_id"=>"7OTST0", "7OTST0_description"=>"St. Andrews day, November 30th, is the National Day of Scotland. St. Andrew is the Patron Saint of Scotland, and Scots celebrate this day around the world. The flag of Scotland is the Cross of St. Andrew, and this is widely displayed as a symbol of national identity, thus the crest accompanying the story behind this beer\r\n\r\nThis caramelized, malt forward Scotch Ale is brewed in honor of St. Andrew and is a brave, collaborative effort of two brewers, Tonya Cornett of Bend Brewing Company & Curt Plants of GoodLife Brewing Company. This beer is fantastic – Slainte Mhath! (Cheers or Good Health in Scottish Gaelic, pronounced “Slanchay Va”!)\r\n\r\nAye, cheers to all the Scots…it is you who inspire us to make this beer. Your passion, honor of tradition and heart is amazing! We thank you for inviting us to be a part of your celebration.\r\n\r\nMalt: Golden Promise, Midnight Wheat, Pale Chocolate, Crystal 60, Carafoam.\r\nHops: Perle, Northern Brewer", "beer_id"=>"zDYbgT", "zDYbgT_name"=>"Mountain Rescue", "zDYbgT_id"=>"zDYbgT", "zDYbgT_description"=>"", "bXHPpu_name"=>"Pass Stout", "bXHPpu_id"=>"bXHPpu", "bXHPpu_description"=>"", "qAj28m_name"=>"Descender IPA", "qAj28m_id"=>"qAj28m", "qAj28m_description"=>"", "Ufw2dZ_name"=>"Dunkelweizen", "Ufw2dZ_id"=>"Ufw2dZ", "Ufw2dZ_description"=>""}
+  [1m[35mBeer Load (0.2ms)[0m  SELECT  "beers".* FROM "beers" WHERE "beers"."beer_api_id" = $1 LIMIT 1  [["beer_api_id", "zDYbgT"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "beers".* FROM "beers" WHERE "beers"."beer_api_id" = $1 LIMIT 1[0m  [["beer_api_id", "zDYbgT"]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 12:08:18 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mBeer Load (0.3ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 1]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 1]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 2]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 3]]
+  Rendered users/show.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 44ms (Views: 37.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 12:19:43 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mBeer Load (0.3ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 1]]
+  [1m[36mTasting Load (0.2ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 1]]
+  [1m[35mTasting Load (0.2ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 2]]
+  [1m[36mTasting Load (0.2ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 3]]
+  Rendered users/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 46ms (Views: 29.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-31 12:19:43 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-31 12:19:43 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-31 12:19:43 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 12:19:43 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-31 12:19:43 -0400
+
+
+Started POST "/beer" for ::1 at 2015-08-31 12:19:52 -0400
+
+ActionController::RoutingError (No route matches [POST] "/beer"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/brian/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/brian/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/brian/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.5ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (88.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (50.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (143.2ms)
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=high+life&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 12:20:00 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"high life", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1178ms (Views: 22.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/beers" for ::1 at 2015-08-31 12:20:03 -0400
+Processing by BeersController#create as HTML
+  Parameters: {"FW35fB_name"=>"High Life Light", "FW35fB_id"=>"FW35fB", "FW35fB_description"=>"Introduced in 1994, Miller High Life Light is the low-calorie version of Miller High Life, offering the same unpretentious attitude with fewer calories.", "voS2xG_name"=>"Miller High Life", "voS2xG_id"=>"voS2xG", "voS2xG_description"=>"Miller High Life, the \"champagne of beers,\" dates to 1903. A classic American style lager, Miller High Life is known for its consistently crisp, smooth taste and iconic clear-glass bottle. Miller High Life embraces its rich heritage and is known by its drinkers as an authentic, unpretentious beer. It's common sense in a bottle.", "BbOui2_name"=>"Life’s A Beach", "BbOui2_id"=>"BbOui2", "BbOui2_description"=>"", "veedjF_name"=>"Lübzer Life", "veedjF_id"=>"veedjF", "veedjF_description"=>"", "2vxsGp_name"=>"Low Life", "2vxsGp_id"=>"2vxsGp", "2vxsGp_description"=>"A clever woman once said; ‘fair is foul and foul is fair’. On that note we threw in a young, unacknowledged hoppy pilsner gave it a limp, wrinkly flavor and finished it off with an insulting high price that will give you a foul feeling in your mouth. That’s why we name Evil Twin Brewing’s Low Life the Golddigger of Beers.", "B0g4dM_name"=>"Range Life", "B0g4dM_id"=>"B0g4dM", "B0g4dM_description"=>"Each batch of our wheat beer is brewed with an evolving hopping scheme. Our new batch of Range Life features Comet hops, a hop with a wild side. This feral hop imparts an especially dank and citrusy character to a lush, wheat-filled body.", "ANZaTk_name"=>"NICE LIFE", "ANZaTk_id"=>"ANZaTk", "ANZaTk_description"=>"", "Pg2px4_name"=>"Half Life", "Pg2px4_id"=>"Pg2px4", "Pg2px4_description"=>"", "sl1qA8_name"=>"Sweet As Pacific Ale", "sl1qA8_id"=>"sl1qA8", "sl1qA8_description"=>"Why name a beer \"Sweet As\"? This beer is brewed with 100% New Zealand Hops. In New Zealand, \"Sweet As \" can be used to describe a fishing hole, a ski run, a sunset glowing behind a mountain or a set of legs that happen to be walking in front of you. Sweet As means \"Really Good.\" Now, let your imagination go wild and think how often you could say Sweet As to describe your GoodLife.\r\n\r\nWe make this beer to say, \"Cheers to all the Sweet As experiences in life.\"Try this beer and good luck not having another...... it's Sweet As!\r\n\r\nMalt: NW Two Row, White Wheat, Vienna, Carafoam\r\nHops: Pacifica", "V4keJZ_name"=>"Comatose", "V4keJZ_id"=>"V4keJZ", "V4keJZ_description"=>"Mother Nature's seasons are amazing, where all her creations flux between an existence in winter's comatose state, spring's colorful fling, summer's hot dance, and fall's laid back swing. The creative juices of musicians jump from an unconscious, winter mindset spuring you to think concerts, road trips and campsites. One sip of this beer will get your blood flowing as you jam to your favorite tunes!\r\n\r\nDisclaimer: We don't recommend hanging upside down in a tree, you're not Eddie... It seems fitting to chill in a hammock while listening to great music and sipping a triple-dry hopped, Imperial IPA -- Music for the taste buds!\r\n\r\nMalt: High Color Pale, Bonlander Munich, Carafoam\r\nHops: Bravo, Zythos, Zeus, Chinook, Cascade, Summit", "7OTST0_name"=>"Scottish Heart", "7OTST0_id"=>"7OTST0", "7OTST0_description"=>"St. Andrews day, November 30th, is the National Day of Scotland. St. Andrew is the Patron Saint of Scotland, and Scots celebrate this day around the world. The flag of Scotland is the Cross of St. Andrew, and this is widely displayed as a symbol of national identity, thus the crest accompanying the story behind this beer\r\n\r\nThis caramelized, malt forward Scotch Ale is brewed in honor of St. Andrew and is a brave, collaborative effort of two brewers, Tonya Cornett of Bend Brewing Company & Curt Plants of GoodLife Brewing Company. This beer is fantastic – Slainte Mhath! (Cheers or Good Health in Scottish Gaelic, pronounced “Slanchay Va”!)\r\n\r\nAye, cheers to all the Scots…it is you who inspire us to make this beer. Your passion, honor of tradition and heart is amazing! We thank you for inviting us to be a part of your celebration.\r\n\r\nMalt: Golden Promise, Midnight Wheat, Pale Chocolate, Crystal 60, Carafoam.\r\nHops: Perle, Northern Brewer", "beer_id"=>"zDYbgT", "zDYbgT_name"=>"Mountain Rescue", "zDYbgT_id"=>"zDYbgT", "zDYbgT_description"=>"", "bXHPpu_name"=>"Pass Stout", "bXHPpu_id"=>"bXHPpu", "bXHPpu_description"=>"", "qAj28m_name"=>"Descender IPA", "qAj28m_id"=>"qAj28m", "qAj28m_description"=>"", "Ufw2dZ_name"=>"Dunkelweizen", "Ufw2dZ_id"=>"Ufw2dZ", "Ufw2dZ_description"=>""}
+  [1m[35mBeer Load (0.2ms)[0m  SELECT  "beers".* FROM "beers" WHERE "beers"."beer_api_id" = $1 LIMIT 1  [["beer_api_id", "zDYbgT"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "beers".* FROM "beers" WHERE "beers"."beer_api_id" = $1 LIMIT 1[0m  [["beer_api_id", "zDYbgT"]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 12:20:03 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mBeer Load (0.2ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 1]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 1]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 2]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 3]]
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=high+life&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 12:21:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"high life", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 424ms (Views: 136.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-31 12:21:29 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-31 12:21:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-31 12:21:29 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-31 12:21:29 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 12:21:29 -0400
+
+
+Started POST "/beers" for ::1 at 2015-08-31 12:21:35 -0400
+Processing by BeersController#create as HTML
+  Parameters: {"FW35fB_name"=>"High Life Light", "FW35fB_id"=>"FW35fB", "FW35fB_description"=>"Introduced in 1994, Miller High Life Light is the low-calorie version of Miller High Life, offering the same unpretentious attitude with fewer calories.", "voS2xG_name"=>"Miller High Life", "voS2xG_id"=>"voS2xG", "voS2xG_description"=>"Miller High Life, the \"champagne of beers,\" dates to 1903. A classic American style lager, Miller High Life is known for its consistently crisp, smooth taste and iconic clear-glass bottle. Miller High Life embraces its rich heritage and is known by its drinkers as an authentic, unpretentious beer. It's common sense in a bottle.", "BbOui2_name"=>"Life’s A Beach", "BbOui2_id"=>"BbOui2", "BbOui2_description"=>"", "veedjF_name"=>"Lübzer Life", "veedjF_id"=>"veedjF", "veedjF_description"=>"", "2vxsGp_name"=>"Low Life", "2vxsGp_id"=>"2vxsGp", "2vxsGp_description"=>"A clever woman once said; ‘fair is foul and foul is fair’. On that note we threw in a young, unacknowledged hoppy pilsner gave it a limp, wrinkly flavor and finished it off with an insulting high price that will give you a foul feeling in your mouth. That’s why we name Evil Twin Brewing’s Low Life the Golddigger of Beers.", "B0g4dM_name"=>"Range Life", "B0g4dM_id"=>"B0g4dM", "B0g4dM_description"=>"Each batch of our wheat beer is brewed with an evolving hopping scheme. Our new batch of Range Life features Comet hops, a hop with a wild side. This feral hop imparts an especially dank and citrusy character to a lush, wheat-filled body.", "ANZaTk_name"=>"NICE LIFE", "ANZaTk_id"=>"ANZaTk", "ANZaTk_description"=>"", "Pg2px4_name"=>"Half Life", "Pg2px4_id"=>"Pg2px4", "Pg2px4_description"=>"", "sl1qA8_name"=>"Sweet As Pacific Ale", "sl1qA8_id"=>"sl1qA8", "sl1qA8_description"=>"Why name a beer \"Sweet As\"? This beer is brewed with 100% New Zealand Hops. In New Zealand, \"Sweet As \" can be used to describe a fishing hole, a ski run, a sunset glowing behind a mountain or a set of legs that happen to be walking in front of you. Sweet As means \"Really Good.\" Now, let your imagination go wild and think how often you could say Sweet As to describe your GoodLife.\r\n\r\nWe make this beer to say, \"Cheers to all the Sweet As experiences in life.\"Try this beer and good luck not having another...... it's Sweet As!\r\n\r\nMalt: NW Two Row, White Wheat, Vienna, Carafoam\r\nHops: Pacifica", "V4keJZ_name"=>"Comatose", "V4keJZ_id"=>"V4keJZ", "V4keJZ_description"=>"Mother Nature's seasons are amazing, where all her creations flux between an existence in winter's comatose state, spring's colorful fling, summer's hot dance, and fall's laid back swing. The creative juices of musicians jump from an unconscious, winter mindset spuring you to think concerts, road trips and campsites. One sip of this beer will get your blood flowing as you jam to your favorite tunes!\r\n\r\nDisclaimer: We don't recommend hanging upside down in a tree, you're not Eddie... It seems fitting to chill in a hammock while listening to great music and sipping a triple-dry hopped, Imperial IPA -- Music for the taste buds!\r\n\r\nMalt: High Color Pale, Bonlander Munich, Carafoam\r\nHops: Bravo, Zythos, Zeus, Chinook, Cascade, Summit", "7OTST0_name"=>"Scottish Heart", "7OTST0_id"=>"7OTST0", "7OTST0_description"=>"St. Andrews day, November 30th, is the National Day of Scotland. St. Andrew is the Patron Saint of Scotland, and Scots celebrate this day around the world. The flag of Scotland is the Cross of St. Andrew, and this is widely displayed as a symbol of national identity, thus the crest accompanying the story behind this beer\r\n\r\nThis caramelized, malt forward Scotch Ale is brewed in honor of St. Andrew and is a brave, collaborative effort of two brewers, Tonya Cornett of Bend Brewing Company & Curt Plants of GoodLife Brewing Company. This beer is fantastic – Slainte Mhath! (Cheers or Good Health in Scottish Gaelic, pronounced “Slanchay Va”!)\r\n\r\nAye, cheers to all the Scots…it is you who inspire us to make this beer. Your passion, honor of tradition and heart is amazing! We thank you for inviting us to be a part of your celebration.\r\n\r\nMalt: Golden Promise, Midnight Wheat, Pale Chocolate, Crystal 60, Carafoam.\r\nHops: Perle, Northern Brewer", "beer_id"=>"zDYbgT", "zDYbgT_name"=>"Mountain Rescue", "zDYbgT_id"=>"zDYbgT", "zDYbgT_description"=>"", "bXHPpu_name"=>"Pass Stout", "bXHPpu_id"=>"bXHPpu", "bXHPpu_description"=>"", "qAj28m_name"=>"Descender IPA", "qAj28m_id"=>"qAj28m", "qAj28m_description"=>"", "Ufw2dZ_name"=>"Dunkelweizen", "Ufw2dZ_id"=>"Ufw2dZ", "Ufw2dZ_description"=>""}
+  [1m[35mBeer Load (0.4ms)[0m  SELECT  "beers".* FROM "beers" WHERE "beers"."beer_api_id" = $1 LIMIT 1  [["beer_api_id", "zDYbgT"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "beers".* FROM "beers" WHERE "beers"."beer_api_id" = $1 LIMIT 1[0m  [["beer_api_id", "zDYbgT"]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 12:21:35 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mBeer Load (0.3ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 1]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 1]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 2]]
+  [1m[36mTasting Load (0.2ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 3]]
+  Rendered users/show.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 44ms (Views: 35.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=high+life&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 12:23:44 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"high life", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 321ms (Views: 18.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/beers" for ::1 at 2015-08-31 12:24:00 -0400
+Processing by BeersController#create as HTML
+  Parameters: {"FW35fB_name"=>"High Life Light", "FW35fB_id"=>"FW35fB", "FW35fB_description"=>"Introduced in 1994, Miller High Life Light is the low-calorie version of Miller High Life, offering the same unpretentious attitude with fewer calories.", "voS2xG_name"=>"Miller High Life", "voS2xG_id"=>"voS2xG", "voS2xG_description"=>"Miller High Life, the \"champagne of beers,\" dates to 1903. A classic American style lager, Miller High Life is known for its consistently crisp, smooth taste and iconic clear-glass bottle. Miller High Life embraces its rich heritage and is known by its drinkers as an authentic, unpretentious beer. It's common sense in a bottle.", "beer_id"=>"BbOui2", "BbOui2_name"=>"Life’s A Beach", "BbOui2_id"=>"BbOui2", "BbOui2_description"=>"", "veedjF_name"=>"Lübzer Life", "veedjF_id"=>"veedjF", "veedjF_description"=>"", "2vxsGp_name"=>"Low Life", "2vxsGp_id"=>"2vxsGp", "2vxsGp_description"=>"A clever woman once said; ‘fair is foul and foul is fair’. On that note we threw in a young, unacknowledged hoppy pilsner gave it a limp, wrinkly flavor and finished it off with an insulting high price that will give you a foul feeling in your mouth. That’s why we name Evil Twin Brewing’s Low Life the Golddigger of Beers.", "B0g4dM_name"=>"Range Life", "B0g4dM_id"=>"B0g4dM", "B0g4dM_description"=>"Each batch of our wheat beer is brewed with an evolving hopping scheme. Our new batch of Range Life features Comet hops, a hop with a wild side. This feral hop imparts an especially dank and citrusy character to a lush, wheat-filled body.", "ANZaTk_name"=>"NICE LIFE", "ANZaTk_id"=>"ANZaTk", "ANZaTk_description"=>"", "Pg2px4_name"=>"Half Life", "Pg2px4_id"=>"Pg2px4", "Pg2px4_description"=>"", "sl1qA8_name"=>"Sweet As Pacific Ale", "sl1qA8_id"=>"sl1qA8", "sl1qA8_description"=>"Why name a beer \"Sweet As\"? This beer is brewed with 100% New Zealand Hops. In New Zealand, \"Sweet As \" can be used to describe a fishing hole, a ski run, a sunset glowing behind a mountain or a set of legs that happen to be walking in front of you. Sweet As means \"Really Good.\" Now, let your imagination go wild and think how often you could say Sweet As to describe your GoodLife.\r\n\r\nWe make this beer to say, \"Cheers to all the Sweet As experiences in life.\"Try this beer and good luck not having another...... it's Sweet As!\r\n\r\nMalt: NW Two Row, White Wheat, Vienna, Carafoam\r\nHops: Pacifica", "V4keJZ_name"=>"Comatose", "V4keJZ_id"=>"V4keJZ", "V4keJZ_description"=>"Mother Nature's seasons are amazing, where all her creations flux between an existence in winter's comatose state, spring's colorful fling, summer's hot dance, and fall's laid back swing. The creative juices of musicians jump from an unconscious, winter mindset spuring you to think concerts, road trips and campsites. One sip of this beer will get your blood flowing as you jam to your favorite tunes!\r\n\r\nDisclaimer: We don't recommend hanging upside down in a tree, you're not Eddie... It seems fitting to chill in a hammock while listening to great music and sipping a triple-dry hopped, Imperial IPA -- Music for the taste buds!\r\n\r\nMalt: High Color Pale, Bonlander Munich, Carafoam\r\nHops: Bravo, Zythos, Zeus, Chinook, Cascade, Summit", "7OTST0_name"=>"Scottish Heart", "7OTST0_id"=>"7OTST0", "7OTST0_description"=>"St. Andrews day, November 30th, is the National Day of Scotland. St. Andrew is the Patron Saint of Scotland, and Scots celebrate this day around the world. The flag of Scotland is the Cross of St. Andrew, and this is widely displayed as a symbol of national identity, thus the crest accompanying the story behind this beer\r\n\r\nThis caramelized, malt forward Scotch Ale is brewed in honor of St. Andrew and is a brave, collaborative effort of two brewers, Tonya Cornett of Bend Brewing Company & Curt Plants of GoodLife Brewing Company. This beer is fantastic – Slainte Mhath! (Cheers or Good Health in Scottish Gaelic, pronounced “Slanchay Va”!)\r\n\r\nAye, cheers to all the Scots…it is you who inspire us to make this beer. Your passion, honor of tradition and heart is amazing! We thank you for inviting us to be a part of your celebration.\r\n\r\nMalt: Golden Promise, Midnight Wheat, Pale Chocolate, Crystal 60, Carafoam.\r\nHops: Perle, Northern Brewer", "zDYbgT_name"=>"Mountain Rescue", "zDYbgT_id"=>"zDYbgT", "zDYbgT_description"=>"", "bXHPpu_name"=>"Pass Stout", "bXHPpu_id"=>"bXHPpu", "bXHPpu_description"=>"", "qAj28m_name"=>"Descender IPA", "qAj28m_id"=>"qAj28m", "qAj28m_description"=>"", "Ufw2dZ_name"=>"Dunkelweizen", "Ufw2dZ_id"=>"Ufw2dZ", "Ufw2dZ_description"=>""}
+  [1m[35mBeer Load (0.2ms)[0m  SELECT  "beers".* FROM "beers" WHERE "beers"."beer_api_id" = $1 LIMIT 1  [["beer_api_id", "BbOui2"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "beers".* FROM "beers" WHERE "beers"."beer_api_id" = $1 LIMIT 1[0m  [["beer_api_id", "BbOui2"]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 12:24:00 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mBeer Load (1.1ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 1]]
+  [1m[36mTasting Load (0.6ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 1]]
+  [1m[35mTasting Load (0.2ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 2]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 3]]
+  Rendered users/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 29ms (Views: 25.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 12:30:50 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mBeer Load (0.2ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 1]]
+  [1m[36mTasting Load (0.2ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 1]]
+  [1m[35mTasting Load (0.2ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 2]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 3]]
+  Rendered users/show.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 63ms (Views: 47.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-31 12:30:50 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-31 12:30:50 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-31 12:30:50 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-31 12:30:50 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 12:30:50 -0400
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=312&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 12:30:57 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"312", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 344ms (Views: 27.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/beers" for ::1 at 2015-08-31 12:31:07 -0400
+Processing by BeersController#create as HTML
+  Parameters: {"EaoR0H_name"=>"312 Urban Wheat Ale", "EaoR0H_id"=>"EaoR0H", "EaoR0H_description"=>"Inspired by the city of Chicago and densely populated with flavor, 312’s spicy aroma of Cascade hops is followed by a crisp, fruity ale flavor delivered in a smooth, creamy body that's immensely refreshing.", "beer_id"=>"JQPA1R", "JQPA1R_name"=>"312 Urban Pale Ale", "JQPA1R_id"=>"JQPA1R", "JQPA1R_description"=>"Brewer’s Notes: We are from the city that invented the skyscraper. We constructed our Urban Pale Ale on a balanced malt backbone, so the citrus hop aroma and crisp flavor can stand tall. Recipe Information Style: Urban Pale Alcohol by Volume: 5.4% International Bitterness Units: 30 Color: Marigold Hops: Amarillo, Mt. Hood, Nugget Malts: 2 Row, Crystal 60 Serving Suggestions: Preferred Glass: Nonic Pint Cellaring"}
+  [1m[35mBeer Load (0.2ms)[0m  SELECT  "beers".* FROM "beers" WHERE "beers"."beer_api_id" = $1 LIMIT 1  [["beer_api_id", "JQPA1R"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "beers".* FROM "beers" WHERE "beers"."beer_api_id" = $1 LIMIT 1[0m  [["beer_api_id", "JQPA1R"]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 12:31:07 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mBeer Load (0.3ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 1]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 1]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 2]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 3]]
+  Rendered users/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 12:35:14 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mBeer Load (0.2ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 1]]
+  [1m[36mTasting Load (0.2ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 1]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 2]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 3]]
+  Rendered users/show.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 59ms (Views: 39.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-31 12:35:15 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-31 12:35:15 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-31 12:35:15 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-31 12:35:15 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 12:35:15 -0400
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=312&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 12:35:19 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"312", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 234ms (Views: 25.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/beers" for ::1 at 2015-08-31 12:35:22 -0400
+Processing by BeersController#create as HTML
+  Parameters: {"EaoR0H_name"=>"312 Urban Wheat Ale", "EaoR0H_id"=>"EaoR0H", "EaoR0H_description"=>"Inspired by the city of Chicago and densely populated with flavor, 312’s spicy aroma of Cascade hops is followed by a crisp, fruity ale flavor delivered in a smooth, creamy body that's immensely refreshing.", "beer_id"=>"JQPA1R", "JQPA1R_name"=>"312 Urban Pale Ale", "JQPA1R_id"=>"JQPA1R", "JQPA1R_description"=>"Brewer’s Notes: We are from the city that invented the skyscraper. We constructed our Urban Pale Ale on a balanced malt backbone, so the citrus hop aroma and crisp flavor can stand tall. Recipe Information Style: Urban Pale Alcohol by Volume: 5.4% International Bitterness Units: 30 Color: Marigold Hops: Amarillo, Mt. Hood, Nugget Malts: 2 Row, Crystal 60 Serving Suggestions: Preferred Glass: Nonic Pint Cellaring"}
+  [1m[35mBeer Load (0.2ms)[0m  SELECT  "beers".* FROM "beers" WHERE "beers"."beer_api_id" = $1 LIMIT 1  [["beer_api_id", "JQPA1R"]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."user_id" = $1 AND "tastings"."beer_api_id" = $2[0m  [["user_id", 1], ["beer_api_id", "JQPA1R"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "beers".* FROM "beers" WHERE "beers"."beer_api_id" = $1 LIMIT 1  [["beer_api_id", "JQPA1R"]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 12:35:22 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mBeer Load (0.2ms)[0m  [1mSELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 1]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 2]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 3]]
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 12:36:20 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mBeer Load (0.2ms)[0m  [1mSELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 1]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 2]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 3]]
+  Rendered users/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 48ms (Views: 31.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-31 12:36:20 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-31 12:36:20 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-31 12:36:20 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-31 12:36:20 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 12:36:20 -0400
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=312&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 12:36:24 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"312", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 286ms (Views: 23.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/beers" for ::1 at 2015-08-31 12:36:27 -0400
+Processing by BeersController#create as HTML
+  Parameters: {"EaoR0H_name"=>"312 Urban Wheat Ale", "EaoR0H_id"=>"EaoR0H", "EaoR0H_description"=>"Inspired by the city of Chicago and densely populated with flavor, 312’s spicy aroma of Cascade hops is followed by a crisp, fruity ale flavor delivered in a smooth, creamy body that's immensely refreshing.", "beer_id"=>"JQPA1R", "JQPA1R_name"=>"312 Urban Pale Ale", "JQPA1R_id"=>"JQPA1R", "JQPA1R_description"=>"Brewer’s Notes: We are from the city that invented the skyscraper. We constructed our Urban Pale Ale on a balanced malt backbone, so the citrus hop aroma and crisp flavor can stand tall. Recipe Information Style: Urban Pale Alcohol by Volume: 5.4% International Bitterness Units: 30 Color: Marigold Hops: Amarillo, Mt. Hood, Nugget Malts: 2 Row, Crystal 60 Serving Suggestions: Preferred Glass: Nonic Pint Cellaring"}
+  [1m[36mBeer Load (0.2ms)[0m  [1mSELECT  "beers".* FROM "beers" WHERE "beers"."beer_api_id" = $1 LIMIT 1[0m  [["beer_api_id", "JQPA1R"]]
+  [1m[35mTasting Load (0.2ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."user_id" = $1 AND "tastings"."beer_api_id" = $2  [["user_id", 1], ["beer_api_id", "JQPA1R"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "beers".* FROM "beers" WHERE "beers"."beer_api_id" = $1 LIMIT 1[0m  [["beer_api_id", "JQPA1R"]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 12:36:27 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mBeer Load (0.2ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 1]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 1]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 2]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 3]]
+  Rendered users/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 12:37:42 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mBeer Load (0.1ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 1]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 1]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 2]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 3]]
+  Rendered users/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 50ms (Views: 31.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-31 12:37:42 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-31 12:37:42 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-31 12:37:42 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-31 12:37:42 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 12:37:42 -0400
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=312&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 12:37:46 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"312", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 204ms (Views: 24.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/beers" for ::1 at 2015-08-31 12:37:49 -0400
+Processing by BeersController#create as HTML
+  Parameters: {"JQPA1R_name"=>"312 Urban Pale Ale", "JQPA1R_id"=>"JQPA1R", "JQPA1R_description"=>"Brewer’s Notes: We are from the city that invented the skyscraper. We constructed our Urban Pale Ale on a balanced malt backbone, so the citrus hop aroma and crisp flavor can stand tall. Recipe Information Style: Urban Pale Alcohol by Volume: 5.4% International Bitterness Units: 30 Color: Marigold Hops: Amarillo, Mt. Hood, Nugget Malts: 2 Row, Crystal 60 Serving Suggestions: Preferred Glass: Nonic Pint Cellaring", "beer_id"=>"EaoR0H", "EaoR0H_name"=>"312 Urban Wheat Ale", "EaoR0H_id"=>"EaoR0H", "EaoR0H_description"=>"Inspired by the city of Chicago and densely populated with flavor, 312’s spicy aroma of Cascade hops is followed by a crisp, fruity ale flavor delivered in a smooth, creamy body that's immensely refreshing."}
+  [1m[35mBeer Load (0.2ms)[0m  SELECT  "beers".* FROM "beers" WHERE "beers"."beer_api_id" = $1 LIMIT 1  [["beer_api_id", "EaoR0H"]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."user_id" = $1 AND "tastings"."beer_api_id" = $2[0m  [["user_id", 1], ["beer_api_id", "EaoR0H"]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'abv' for Beer.):
+  app/controllers/beers_controller.rb:58:in `create'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.7ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (48.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (113.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddColumnsToBeers (20150831172556)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (7.4ms)[0m  [1mALTER TABLE "beers" ADD "description" character varying[0m
+PG::DuplicateColumn: ERROR:  column "description" of relation "beers" already exists
+: ALTER TABLE "beers" ADD "description" character varying
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddColumnsToBeers (20150831172556)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "beers" ADD "abv" character varying[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "beers" ADD "image_url" character varying
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "beers" ADD "brewery_name" character varying[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150831172556"]]
+  [1m[36m (6.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'beers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.2ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'comments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tastings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (115.7ms)[0m  [1mDROP DATABASE IF EXISTS "awesome_app_development"[0m
+  [1m[35m (114.5ms)[0m  DROP DATABASE IF EXISTS "awesome_app_test"
+  [1m[36m (377.2ms)[0m  [1mCREATE DATABASE "awesome_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (258.6ms)[0m  CREATE DATABASE "awesome_app_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (20.2ms)[0m  CREATE TABLE "beers" ("id" serial primary key, "name" character varying, "description" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "beer_api_id" character varying, "abv" character varying, "image_url" character varying, "brewery_name" character varying) 
+  [1m[36m (4.8ms)[0m  [1mCREATE TABLE "comments" ("id" serial primary key, "user_id" integer, "beer_id" integer, "content" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "tastings" ("id" serial primary key, "user_id" integer, "beer_id" integer, "tasting_notes" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "beer_api_id" character varying) 
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying, "password_digest" character varying, "image_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (13.7ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150831172556')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150828162502')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150828162513')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150828162522')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150828162531')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150831134611')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150831134617')[0m
+  [1m[35mSQL (0.2ms)[0m  CREATE EXTENSION IF NOT EXISTS "plpgsql"
+  [1m[36m (4.8ms)[0m  [1mCREATE TABLE "beers" ("id" serial primary key, "name" character varying, "description" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "beer_api_id" character varying, "abv" character varying, "image_url" character varying, "brewery_name" character varying) [0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE "comments" ("id" serial primary key, "user_id" integer, "beer_id" integer, "content" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "tastings" ("id" serial primary key, "user_id" integer, "beer_id" integer, "tasting_notes" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "beer_api_id" character varying) [0m
+  [1m[35m (3.9ms)[0m  CREATE TABLE "users" ("id" serial primary key, "name" character varying, "password_digest" character varying, "image_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150831172556')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150828162502')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150828162513')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150828162522')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150828162531')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150831134611')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150831134617')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("name", "password_digest", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "brian"], ["password_digest", "$2a$10$N2bXuqHyalHBi3YtSmR2b.DcbILjPt6TxYg.X4GAW231CXIpj8o.C"], ["image_url", "http://i.giphy.com/nMNzebXyK6fkY.gif"], ["created_at", "2015-08-31 17:34:39.419980"], ["updated_at", "2015-08-31 17:34:39.419980"]]
+  [1m[35m (6.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "password_digest", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "ashley"], ["password_digest", "$2a$10$4mXnUdOiCgyiTn7jRDTlfulkRzlZXzbwqWojpZVuQy7N079VIr1qe"], ["image_url", "http://i.giphy.com/sLGSt1R30Api0.gif"], ["created_at", "2015-08-31 17:34:39.496103"], ["updated_at", "2015-08-31 17:34:39.496103"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "beers" ("name", "beer_api_id", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Blue Moon Honey Moon Summer Ale"], ["beer_api_id", "PkqhUA"], ["description", "tasty"], ["created_at", "2015-08-31 17:34:39.509613"], ["updated_at", "2015-08-31 17:34:39.509613"]]
+  [1m[35m (6.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "beers" ("name", "beer_api_id", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Anchor Steam"], ["beer_api_id", "Uiol9p"], ["description", "steamy"], ["created_at", "2015-08-31 17:34:39.518279"], ["updated_at", "2015-08-31 17:34:39.518279"]]
+  [1m[36m (4.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "beers" ("name", "beer_api_id", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Miller High Life"], ["beer_api_id", "voS2XG"], ["description", "champagne"], ["created_at", "2015-08-31 17:34:39.525598"], ["updated_at", "2015-08-31 17:34:39.525598"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "beers" ("name", "beer_api_id", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Coors Banquet"], ["beer_api_id", "vJCXKD"], ["description", "malty"], ["created_at", "2015-08-31 17:34:39.528187"], ["updated_at", "2015-08-31 17:34:39.528187"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "beers" ("name", "beer_api_id", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Beast"], ["beer_api_id", "OTB5EC"], ["description", "the beast is a seducer"], ["created_at", "2015-08-31 17:34:39.530126"], ["updated_at", "2015-08-31 17:34:39.530126"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tastings" ("user_id", "beer_id", "beer_api_id", "tasting_notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["user_id", 1], ["beer_id", 1], ["beer_api_id", "PkqhUA"], ["tasting_notes", "it was a tuesday"], ["created_at", "2015-08-31 17:34:39.552559"], ["updated_at", "2015-08-31 17:34:39.552559"]]
+  [1m[36m (6.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tastings" ("user_id", "beer_id", "beer_api_id", "tasting_notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["beer_id", 2], ["beer_api_id", "Uiol9p"], ["tasting_notes", "it was a wednesday"], ["created_at", "2015-08-31 17:34:39.561241"], ["updated_at", "2015-08-31 17:34:39.561241"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tastings" ("user_id", "beer_id", "beer_api_id", "tasting_notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["user_id", 1], ["beer_id", 3], ["beer_api_id", "voS2XG"], ["tasting_notes", "it was a thursday"], ["created_at", "2015-08-31 17:34:39.563900"], ["updated_at", "2015-08-31 17:34:39.563900"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tastings" ("user_id", "beer_id", "beer_api_id", "tasting_notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["beer_id", 2], ["beer_api_id", "Uiol9p"], ["tasting_notes", "it was a friday"], ["created_at", "2015-08-31 17:34:39.566261"], ["updated_at", "2015-08-31 17:34:39.566261"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tastings" ("user_id", "beer_id", "beer_api_id", "tasting_notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["user_id", 2], ["beer_id", 4], ["beer_api_id", "vJCXKD"], ["tasting_notes", "it was a weekend"], ["created_at", "2015-08-31 17:34:39.568226"], ["updated_at", "2015-08-31 17:34:39.568226"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tastings" ("user_id", "beer_id", "beer_api_id", "tasting_notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["beer_id", 5], ["beer_api_id", "OTB5EC"], ["tasting_notes", "it was a weekday"], ["created_at", "2015-08-31 17:34:39.570164"], ["updated_at", "2015-08-31 17:34:39.570164"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("user_id", "beer_id", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 1], ["beer_id", 1], ["content", "hella good"], ["created_at", "2015-08-31 17:34:39.578088"], ["updated_at", "2015-08-31 17:34:39.578088"]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("user_id", "beer_id", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["beer_id", 2], ["content", "mad decent"], ["created_at", "2015-08-31 17:34:39.586555"], ["updated_at", "2015-08-31 17:34:39.586555"]]
+  [1m[35m (6.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("user_id", "beer_id", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 1], ["beer_id", 3], ["content", "extra medium"], ["created_at", "2015-08-31 17:34:39.595042"], ["updated_at", "2015-08-31 17:34:39.595042"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("user_id", "beer_id", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 2], ["beer_id", 2], ["content", "yo!"], ["created_at", "2015-08-31 17:34:39.597614"], ["updated_at", "2015-08-31 17:34:39.597614"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("user_id", "beer_id", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 2], ["beer_id", 3], ["content", "changed my life!"], ["created_at", "2015-08-31 17:34:39.599673"], ["updated_at", "2015-08-31 17:34:39.599673"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "comments" ("user_id", "beer_id", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 2], ["beer_id", 4], ["content", "!! O_o !!"], ["created_at", "2015-08-31 17:34:39.601382"], ["updated_at", "2015-08-31 17:34:39.601382"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=312&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 13:35:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"312", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 529ms (Views: 152.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-31 13:35:04 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-31 13:35:04 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-31 13:35:04 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-31 13:35:04 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 13:35:04 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-31 13:35:04 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-31 13:35:04 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 13:35:04 -0400
+
+
+Started POST "/beers" for ::1 at 2015-08-31 13:35:07 -0400
+Processing by BeersController#create as HTML
+  Parameters: {"EaoR0H_name"=>"312 Urban Wheat Ale", "EaoR0H_id"=>"EaoR0H", "EaoR0H_description"=>"Inspired by the city of Chicago and densely populated with flavor, 312’s spicy aroma of Cascade hops is followed by a crisp, fruity ale flavor delivered in a smooth, creamy body that's immensely refreshing.", "EaoR0H_abv"=>"4.2", "EaoR0H_image_url"=>"https://s3.amazonaws.com/brewerydbapi/beer/EaoR0H/upload_TdVJdI-large.png", "EaoR0H_brewery_name"=>"Goose Island Beer Company", "beer_id"=>"JQPA1R", "JQPA1R_name"=>"312 Urban Pale Ale", "JQPA1R_id"=>"JQPA1R", "JQPA1R_description"=>"Brewer’s Notes: We are from the city that invented the skyscraper. We constructed our Urban Pale Ale on a balanced malt backbone, so the citrus hop aroma and crisp flavor can stand tall. Recipe Information Style: Urban Pale Alcohol by Volume: 5.4% International Bitterness Units: 30 Color: Marigold Hops: Amarillo, Mt. Hood, Nugget Malts: 2 Row, Crystal 60 Serving Suggestions: Preferred Glass: Nonic Pint Cellaring", "JQPA1R_abv"=>"5.4", "JQPA1R_image_url"=>"https://s3.amazonaws.com/brewerydbapi/beer/JQPA1R/upload_zfRm94-large.png", "JQPA1R_brewery_name"=>"Goose Island Beer Company"}
+  [1m[35mBeer Load (0.3ms)[0m  SELECT  "beers".* FROM "beers" WHERE "beers"."beer_api_id" = $1 LIMIT 1  [["beer_api_id", "JQPA1R"]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."user_id" = $1 AND "tastings"."beer_api_id" = $2[0m  [["user_id", 1], ["beer_api_id", "JQPA1R"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "beers" ("beer_api_id", "name", "description", "abv", "image_url", "brewery_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["beer_api_id", "JQPA1R"], ["name", "312 Urban Pale Ale"], ["description", "Brewer’s Notes: We are from the city that invented the skyscraper. We constructed our Urban Pale Ale on a balanced malt backbone, so the citrus hop aroma and crisp flavor can stand tall. Recipe Information Style: Urban Pale Alcohol by Volume: 5.4% International Bitterness Units: 30 Color: Marigold Hops: Amarillo, Mt. Hood, Nugget Malts: 2 Row, Crystal 60 Serving Suggestions: Preferred Glass: Nonic Pint Cellaring"], ["abv", "5.4"], ["image_url", "https://s3.amazonaws.com/brewerydbapi/beer/JQPA1R/upload_zfRm94-large.png"], ["brewery_name", "Goose Island Beer Company"], ["created_at", "2015-08-31 17:35:07.299650"], ["updated_at", "2015-08-31 17:35:07.299650"]]
+  [1m[35m (6.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tastings" ("user_id", "beer_id", "beer_api_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 1], ["beer_id", 6], ["beer_api_id", "JQPA1R"], ["created_at", "2015-08-31 17:35:07.312781"], ["updated_at", "2015-08-31 17:35:07.312781"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 27ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 13:35:07 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mBeer Load (0.3ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 1]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 1]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 2]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 3]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 6]]
+  Rendered users/show.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 39ms (Views: 32.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/beers/1" for ::1 at 2015-08-31 13:35:31 -0400
+Processing by BeersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBeer Load (0.2ms)[0m  [1mSELECT  "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."beer_id" = $1  [["beer_id", 1]]
+  Rendered beers/show.html.erb within layouts/application (16.9ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.7ms)
+
+ActionView::Template::Error (undefined local variable or method `beers' for #<#<Class:0x007f8a1cbb7a80>:0x007f8a24b79ea8>):
+    1: <html>
+    2: 	<body>
+    3: 
+    4: <p>Beer Name: <%= beers.name %></p>
+    5: <p> Beer Description: <%= beers.description %></p>
+    6: <p>Beer ABV.: <%= beers.abv %></p>
+    7: <p><img src="<%= beer.image_url %>"></p>
+  app/views/beers/show.html.erb:4:in `_app_views_beers_show_html_erb___2597686592531204666_70115649111560'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (53.8ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (119.0ms)
+
+
+Started GET "/beers/1" for ::1 at 2015-08-31 13:36:34 -0400
+Processing by BeersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBeer Load (0.2ms)[0m  [1mSELECT  "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."beer_id" = $1  [["beer_id", 1]]
+  Rendered beers/show.html.erb within layouts/application (10.7ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined local variable or method `beer' for #<#<Class:0x007f8a1cbb7a80>:0x007f8a239aecf0>):
+    1: <html>
+    2: 	<body>
+    3: 
+    4: <p>Beer Name: <%= beer.name %></p>
+    5: <p> Beer Description: <%= beer.description %></p>
+    6: <p>Beer ABV.: <%= beer.abv %></p>
+    7: <p><img src="<%= beer.image_url %>"></p>
+  app/views/beers/show.html.erb:4:in `_app_views_beers_show_html_erb___2597686592531204666_70115639782680'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.5ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.5ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (91.0ms)
+
+
+Started GET "/beers/1" for ::1 at 2015-08-31 13:37:20 -0400
+Processing by BeersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBeer Load (0.2ms)[0m  [1mSELECT  "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."beer_id" = $1  [["beer_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered beers/show.html.erb within layouts/application (12.8ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined local variable or method `beer' for #<#<Class:0x007f8a1cbb7a80>:0x007f8a248d2fd8>):
+    19: 		<textarea name="content" placeholder="What would you like to say?"></textarea>
+    20: 		</br>
+    21: 		<button>Submit comment</button>
+    22: 		<input type="hidden" name="beer_id" value="<%= beer.id %>">
+    23: 	</form>
+    24: 
+    25: 	</body>
+  app/views/beers/show.html.erb:22:in `_app_views_beers_show_html_erb___2597686592531204666_70115647717500'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (97.2ms)
+
+
+Started GET "/beers/1" for ::1 at 2015-08-31 13:37:42 -0400
+Processing by BeersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBeer Load (0.2ms)[0m  SELECT  "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."beer_id" = $1[0m  [["beer_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered beers/show.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    65: 
+    66: 
+    67: 
+    68: <h1><%= @venue.name %></h1>
+    69: <h3><%= @venue.city %>, <%= @venue.state %></h3>
+    70: <% if @venue.family_friendly %>
+    71: 	<p>It's Family Friendly!</p>
+  app/views/beers/show.html.erb:68:in `_app_views_beers_show_html_erb___2597686592531204666_70115592214240'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.9ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.9ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.7ms)
+
+
+Started GET "/beers/1" for ::1 at 2015-08-31 13:39:24 -0400
+Processing by BeersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBeer Load (0.2ms)[0m  [1mSELECT  "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."beer_id" = $1  [["beer_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered beers/show.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    65: 
+    66: 
+    67: 
+    68: <h1><%= @venue.name %></h1>
+    69: <h3><%= @venue.city %>, <%= @venue.state %></h3>
+    70: <% if @venue.family_friendly %>
+    71: 	<p>It's Family Friendly!</p>
+  app/views/beers/show.html.erb:68:in `_app_views_beers_show_html_erb___2597686592531204666_70115593447580'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.7ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.4ms)
+
+
+Started GET "/beers/1" for ::1 at 2015-08-31 13:39:38 -0400
+Processing by BeersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBeer Load (0.2ms)[0m  SELECT  "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."beer_id" = $1[0m  [["beer_id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered beers/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-31 13:39:38 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-31 13:39:38 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-31 13:39:38 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-31 13:39:38 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 13:39:38 -0400
+
+
+Started GET "/beers/2" for ::1 at 2015-08-31 13:39:54 -0400
+Processing by BeersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBeer Load (0.1ms)[0m  [1mSELECT  "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."beer_id" = $1  [["beer_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered beers/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/beers/6" for ::1 at 2015-08-31 13:39:59 -0400
+Processing by BeersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBeer Load (0.2ms)[0m  [1mSELECT  "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."beer_id" = $1  [["beer_id", 6]]
+  Rendered beers/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 13:40:21 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mBeer Load (0.3ms)[0m  [1mSELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 1]]
+  [1m[36mTasting Load (0.2ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 2]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 3]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 6]]
+  Rendered users/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/2" for ::1 at 2015-08-31 13:40:27 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 13:40:27 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mBeer Load (0.3ms)[0m  [1mSELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 1]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 2]]
+  [1m[35mTasting Load (0.2ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 3]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 6]]
+  Rendered users/show.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=porter&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 13:40:59 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"porter", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 317ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    15:     				<input type="hidden" name="<%=beer["id"]%>_id" value="<%=beer["id"]%>">
+    16:     				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
+    17:     				<input type="hidden" name="<%=beer["id"]%>_abv" value="<%=beer["abv"] || 'n/a' %>">
+    18:     				<input type="hidden" name="<%=beer["id"]%>_image_url" value="<%=beer["labels"]["large"] || 'http://www.handfamilycompanies.com/filebin/images/product_images/Default_Product.jpg'%>">
+    19:     				<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"] || 'brewery not known' %>">
+    20: 				<% end %>
+    21: 
+  app/views/beers/search.html.erb:18:in `block in _app_views_beers_search_html_erb___2713715924665890535_70115590925340'
+  app/views/beers/search.html.erb:12:in `each'
+  app/views/beers/search.html.erb:12:in `each_with_index'
+  app/views/beers/search.html.erb:12:in `_app_views_beers_search_html_erb___2713715924665890535_70115590925340'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.8ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (93.4ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 13:45:24 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mBeer Load (0.2ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 1]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 1]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 2]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 3]]
+  [1m[35mTasting Load (0.2ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 6]]
+  Rendered users/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-31 13:45:24 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-31 13:45:24 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-31 13:45:24 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-31 13:45:24 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 13:45:24 -0400
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=high+life&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 13:45:27 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"high life", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 358ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    15:     				<input type="hidden" name="<%=beer["id"]%>_id" value="<%=beer["id"]%>">
+    16:     				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
+    17:     				<input type="hidden" name="<%=beer["id"]%>_abv" value="<%=beer["abv"] || 'n/a' %>">
+    18:     				<input type="hidden" name="<%=beer["id"]%>_image_url" value="<%=beer["labels"]["large"] || 'http://www.handfamilycompanies.com/filebin/images/product_images/Default_Product.jpg'%>">
+    19:     				<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"] || 'brewery not known' %>">
+    20: 				<% end %>
+    21: 
+  app/views/beers/search.html.erb:18:in `block in _app_views_beers_search_html_erb___2713715924665890535_70115590925340'
+  app/views/beers/search.html.erb:12:in `each'
+  app/views/beers/search.html.erb:12:in `each_with_index'
+  app/views/beers/search.html.erb:12:in `_app_views_beers_search_html_erb___2713715924665890535_70115590925340'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.6ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.9ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (96.0ms)
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=high+life&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 13:51:27 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"high life", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 284ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    15:     				<input type="hidden" name="<%=beer["id"]%>_id" value="<%=beer["id"]%>">
+    16:     				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
+    17:     				<input type="hidden" name="<%=beer["id"]%>_abv" value="<%= beer["abv"] || 'n/a' %>">
+    18:     				<input type="hidden" name="<%=beer["id"]%>_image_url" value="<%= beer["labels"]["large"] %>">
+    19:     				<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"] || 'brewery not known' %>">
+    20: 				<% end %>
+    21: 
+  app/views/beers/search.html.erb:18:in `block in _app_views_beers_search_html_erb___2713715924665890535_70115596108540'
+  app/views/beers/search.html.erb:12:in `each'
+  app/views/beers/search.html.erb:12:in `each_with_index'
+  app/views/beers/search.html.erb:12:in `_app_views_beers_search_html_erb___2713715924665890535_70115596108540'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.7ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (87.9ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 13:51:30 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mBeer Load (0.3ms)[0m  [1mSELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 1]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 2]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 3]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 6]]
+  Rendered users/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-31 13:51:30 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-31 13:51:30 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 13:51:30 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-31 13:51:30 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-31 13:51:30 -0400
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=high+life&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 13:51:32 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"high life", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 1903ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    15:     				<input type="hidden" name="<%=beer["id"]%>_id" value="<%=beer["id"]%>">
+    16:     				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
+    17:     				<input type="hidden" name="<%=beer["id"]%>_abv" value="<%= beer["abv"] || 'n/a' %>">
+    18:     				<input type="hidden" name="<%=beer["id"]%>_image_url" value="<%= beer["labels"]["large"] %>">
+    19:     				<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"] || 'brewery not known' %>">
+    20: 				<% end %>
+    21: 
+  app/views/beers/search.html.erb:18:in `block in _app_views_beers_search_html_erb___2713715924665890535_70115596108540'
+  app/views/beers/search.html.erb:12:in `each'
+  app/views/beers/search.html.erb:12:in `each_with_index'
+  app/views/beers/search.html.erb:12:in `_app_views_beers_search_html_erb___2713715924665890535_70115596108540'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.5ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (50.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (108.0ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 13:52:24 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mBeer Load (0.3ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 1]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 1]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 2]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 3]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 6]]
+  Rendered users/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-31 13:52:24 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-31 13:52:24 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-31 13:52:24 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-31 13:52:24 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 13:52:24 -0400
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=porter&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 13:52:27 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"porter", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 191ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    15:     				<input type="hidden" name="<%=beer["id"]%>_id" value="<%=beer["id"]%>">
+    16:     				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
+    17:     				<input type="hidden" name="<%=beer["id"]%>_abv" value="<%= beer["abv"] || 'n/a' %>">
+    18:     				<input type="hidden" name="<%=beer["id"]%>_image_url" value="<%= beer["labels"]["large"] ? beer["labels"]["large"] : 'http://www.handfamilycompanies.com/filebin/images/product_images/Default_Product.jpg' %>">
+    19:     				<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"] || 'brewery not known' %>">
+    20: 				<% end %>
+    21: 
+  app/views/beers/search.html.erb:18:in `block in _app_views_beers_search_html_erb___2713715924665890535_70115596191380'
+  app/views/beers/search.html.erb:12:in `each'
+  app/views/beers/search.html.erb:12:in `each_with_index'
+  app/views/beers/search.html.erb:12:in `_app_views_beers_search_html_erb___2713715924665890535_70115596191380'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.0ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.9ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.6ms)
+
+
+Started GET "/beers/6" for ::1 at 2015-08-31 13:53:59 -0400
+Processing by BeersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBeer Load (0.1ms)[0m  [1mSELECT  "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."beer_id" = $1  [["beer_id", 6]]
+  Rendered beers/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2015-08-31 14:13:26 -0400
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 14:13:29 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mBeer Load (0.4ms)[0m  [1mSELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 1]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 2]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 3]]
+  [1m[36mTasting Load (0.2ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 6]]
+  Rendered users/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=porter&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:13:37 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"porter", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 1408ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    16:     				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
+    17:     				<input type="hidden" name="<%=beer["id"]%>_abv" value="<%= beer["abv"] || 'n/a' %>">
+    18:     				
+    19:     				<input type="hidden" name="<%=beer["id"]%>_image_url" value="<%=beer["labels"]["large"]%>">
+    20:     				
+    21:     				<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"] || 'brewery not known' %>">
+    22: 				<% end %>
+  app/views/beers/search.html.erb:19:in `block in _app_views_beers_search_html_erb___2713715924665890535_70115632830560'
+  app/views/beers/search.html.erb:12:in `each'
+  app/views/beers/search.html.erb:12:in `each_with_index'
+  app/views/beers/search.html.erb:12:in `_app_views_beers_search_html_erb___2713715924665890535_70115632830560'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.8ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (101.7ms)
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=porter&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:15:55 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"porter", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 346ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    16:     				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
+    17:     				<input type="hidden" name="<%=beer["id"]%>_abv" value="<%= beer["abv"] || 'n/a' %>">
+    18:     				
+    19:     				<input type="hidden" name="<%=beer["id"]%>_image_url" value="<%=beer["labels"]["large"]%>">
+    20:     				
+    21:     				<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"] || 'brewery not known' %>">
+    22: 				<% end %>
+  app/views/beers/search.html.erb:19:in `block in _app_views_beers_search_html_erb___2713715924665890535_70115662479520'
+  app/views/beers/search.html.erb:12:in `each'
+  app/views/beers/search.html.erb:12:in `each_with_index'
+  app/views/beers/search.html.erb:12:in `_app_views_beers_search_html_erb___2713715924665890535_70115662479520'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.9ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (91.4ms)
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=porter&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:16:13 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"porter", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 223ms (Views: 24.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-31 14:16:14 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-31 14:16:14 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-31 14:16:14 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-31 14:16:14 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 14:16:14 -0400
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=porter&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:18:00 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"porter", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 336ms (ActiveRecord: 1.9ms)
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    16:     				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
+    17:     				<input type="hidden" name="<%=beer["id"]%>_abv" value="<%= beer["abv"] || 'n/a' %>">
+    18:     				
+    19:     				<input type="hidden" name="<%=beer["id"]%>_image_url" value="<%=beer["labels"]["large"]%>">
+    20:     				
+    21:     				<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"] || 'brewery not known' %>">
+    22: 				<% end %>
+  app/views/beers/search.html.erb:19:in `block in _app_views_beers_search_html_erb___2713715924665890535_70115641117340'
+  app/views/beers/search.html.erb:12:in `each'
+  app/views/beers/search.html.erb:12:in `each_with_index'
+  app/views/beers/search.html.erb:12:in `_app_views_beers_search_html_erb___2713715924665890535_70115641117340'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.8ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (97.4ms)
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=porter&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:18:08 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"porter", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 218ms (ActiveRecord: 2.0ms)
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    16:     				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
+    17:     				<input type="hidden" name="<%=beer["id"]%>_abv" value="<%= beer["abv"] || 'n/a' %>">
+    18:     				
+    19:     				<input type="hidden" name="<%=beer["id"]%>_image_url" value="<%=beer["labels"]["large"]%>">
+    20:     				
+    21:     				<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"] || 'brewery not known' %>">
+    22: 				<% end %>
+  app/views/beers/search.html.erb:19:in `block in _app_views_beers_search_html_erb___2713715924665890535_70115641117340'
+  app/views/beers/search.html.erb:12:in `each'
+  app/views/beers/search.html.erb:12:in `each_with_index'
+  app/views/beers/search.html.erb:12:in `_app_views_beers_search_html_erb___2713715924665890535_70115641117340'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.6ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.9ms)
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=porter&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:20:10 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"porter", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 494ms (ActiveRecord: 3.6ms)
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    15:     				<input type="hidden" name="<%=beer["id"]%>_id" value="<%=beer["id"]%>">
+    16:     				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
+    17:     				<input type="hidden" name="<%=beer["id"]%>_abv" value="<%=beer["abv"]%>">
+    18:     				<input type="hidden" name="<%=beer["id"]%>_image_url" value="<%=beer["labels"]["large"]%>">
+    19:     				<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"]%>">
+    20: 				<% end %>
+    21: 
+  app/views/beers/search.html.erb:18:in `block in _app_views_beers_search_html_erb__1287148873256463148_70332443076440'
+  app/views/beers/search.html.erb:12:in `each'
+  app/views/beers/search.html.erb:12:in `each_with_index'
+  app/views/beers/search.html.erb:12:in `_app_views_beers_search_html_erb__1287148873256463148_70332443076440'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.6ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (107.3ms)
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=porter&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:21:43 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"porter", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 362ms (Views: 127.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-31 14:21:44 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-31 14:21:44 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-31 14:21:44 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 14:21:44 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-31 14:21:44 -0400
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=raging&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:22:09 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"raging", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 151ms (Views: 18.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=raging&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:22:50 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"raging", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 173ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    15:     				<input type="hidden" name="<%=beer["id"]%>_id" value="<%=beer["id"]%>">
+    16:     				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
+    17:     				<input type="hidden" name="<%=beer["id"]%>_abv" value="<%=beer["abv"]%>">
+    18:     				<input type="hidden" name="<%=beer["id"]%>_image_url" value="<%=beer["labels"]["large"]%>">
+    19:     				<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"]%>">
+    20: 				<% end %>
+    21: 
+  app/views/beers/search.html.erb:18:in `block in _app_views_beers_search_html_erb__1287148873256463148_70332409713680'
+  app/views/beers/search.html.erb:12:in `each'
+  app/views/beers/search.html.erb:12:in `each_with_index'
+  app/views/beers/search.html.erb:12:in `_app_views_beers_search_html_erb__1287148873256463148_70332409713680'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.7ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.0ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.6ms)
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=raging&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:24:51 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"raging", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 219ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    15:     				<input type="hidden" name="<%=beer["id"]%>_id" value="<%=beer["id"]%>">
+    16:     				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
+    17:     				<input type="hidden" name="<%=beer["id"]%>_abv" value="<%=beer["abv"]%>">
+    18:     				<input type="hidden" name="<%=beer["id"]%>_image_url" value="<%=beer["labels"]["large"]%>">
+    19:     				<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"]%>">
+    20: 				<% end %>
+    21: 
+  app/views/beers/search.html.erb:18:in `block in _app_views_beers_search_html_erb__1287148873256463148_70332409823320'
+  app/views/beers/search.html.erb:12:in `each'
+  app/views/beers/search.html.erb:12:in `each_with_index'
+  app/views/beers/search.html.erb:12:in `_app_views_beers_search_html_erb__1287148873256463148_70332409823320'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.0ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (94.4ms)
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=raging&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:24:58 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"raging", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 252ms (Views: 21.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-31 14:24:59 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-31 14:24:59 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-31 14:24:59 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-31 14:24:59 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 14:24:59 -0400
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=porter&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:26:23 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"porter", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 388ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=porter&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:28:15 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"porter", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2544ms (Views: 19.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-31 14:28:18 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-31 14:28:18 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-31 14:28:18 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 14:28:18 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-31 14:28:18 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 14:28:18 -0400
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=porter&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:29:25 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"porter", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 343ms (Views: 19.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-31 14:29:25 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-31 14:29:25 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-31 14:29:25 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-31 14:29:25 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 14:29:25 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-31 14:29:25 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-31 14:29:25 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 14:29:25 -0400
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=porter&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:30:50 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"porter", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 286ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    15:     				<input type="hidden" name="<%=beer["id"]%>_id" value="<%=beer["id"]%>">
+    16:     				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
+    17:     				<input type="hidden" name="<%=beer["id"]%>_abv" value="<%=beer["abv"]%>">
+    18:     				<input type="hidden" name="<%=beer["id"]%>_image_url" value="<%=beer["labels"]["large"]%>">
+    19:     				<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"]%>">
+    20: 				<% end %>
+    21: 
+  app/views/beers/search.html.erb:18:in `block in _app_views_beers_search_html_erb__1287148873256463148_70332385775300'
+  app/views/beers/search.html.erb:12:in `each'
+  app/views/beers/search.html.erb:12:in `each_with_index'
+  app/views/beers/search.html.erb:12:in `_app_views_beers_search_html_erb__1287148873256463148_70332385775300'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.9ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.5ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (87.6ms)
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=porter&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:31:17 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"porter", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 238ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    15:     				<input type="hidden" name="<%=beer["id"]%>_id" value="<%=beer["id"]%>">
+    16:     				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
+    17:     				<input type="hidden" name="<%=beer["id"]%>_abv" value="<%=beer["abv"]%>">
+    18:     				<input type="hidden" name="<%=beer["id"]%>_image_url" value="<%=beer["labels"]["large"] || 'no image'%>">
+    19:     				<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"]%>">
+    20: 				<% end %>
+    21: 
+  app/views/beers/search.html.erb:18:in `block in _app_views_beers_search_html_erb__1287148873256463148_70332445113100'
+  app/views/beers/search.html.erb:12:in `each'
+  app/views/beers/search.html.erb:12:in `each_with_index'
+  app/views/beers/search.html.erb:12:in `_app_views_beers_search_html_erb__1287148873256463148_70332445113100'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.0ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.7ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (100.6ms)
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=porter&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:32:09 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"porter", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 367ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/Users/brian/dev/beerForumApp/awesome_app/app/views/beers/search.html.erb:18: syntax error, unexpected ')', expecting keyword_end
+...els"]["large"] else 'no image');@output_buffer.safe_append='...
+...                               ^
+/Users/brian/dev/beerForumApp/awesome_app/app/views/beers/search.html.erb:30: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/brian/dev/beerForumApp/awesome_app/app/views/beers/search.html.erb:32: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/beers/search.html.erb:18: syntax error, unexpected ')', expecting keyword_end
+  app/views/beers/search.html.erb:30: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/beers/search.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.6ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (86.9ms)
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=porter&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:32:37 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"porter", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 221ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    15:     				<input type="hidden" name="<%=beer["id"]%>_id" value="<%=beer["id"]%>">
+    16:     				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
+    17:     				<input type="hidden" name="<%=beer["id"]%>_abv" value="<%=beer["abv"]%>">
+    18:     				<input type="hidden" name="<%=beer["id"]%>_image_url" value="if<%= if (beer["labels"]["large"]) then beer["labels"]["large"] else 'no image' end%>">
+    19:     				<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"]%>">
+    20: 				<% end %>
+    21: 
+  app/views/beers/search.html.erb:18:in `block in _app_views_beers_search_html_erb__1287148873256463148_70332455539280'
+  app/views/beers/search.html.erb:12:in `each'
+  app/views/beers/search.html.erb:12:in `each_with_index'
+  app/views/beers/search.html.erb:12:in `_app_views_beers_search_html_erb__1287148873256463148_70332455539280'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.7ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.6ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (90.3ms)
+
+
+Started PUT "/beers/console/repl_sessions/38dbd477360a163c70cacf7713abb2f4" for ::1 at 2015-08-31 14:32:52 -0400
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=raging&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:33:28 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"raging", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 419ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    15:     				<input type="hidden" name="<%=beer["id"]%>_id" value="<%=beer["id"]%>">
+    16:     				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
+    17:     				<input type="hidden" name="<%=beer["id"]%>_abv" value="<%=beer["abv"]%>">
+    18:     				<input type="hidden" name="<%=beer["id"]%>_image_url" value="if<%= if (beer["labels"]["large"]) then beer["labels"]["large"] else 'no image' end%>">
+    19:     				<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"]%>">
+    20: 				<% end %>
+    21: 
+  app/views/beers/search.html.erb:18:in `block in _app_views_beers_search_html_erb__1287148873256463148_70332455539280'
+  app/views/beers/search.html.erb:12:in `each'
+  app/views/beers/search.html.erb:12:in `each_with_index'
+  app/views/beers/search.html.erb:12:in `_app_views_beers_search_html_erb__1287148873256463148_70332455539280'
+
+
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.7ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.5ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.9ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (93.9ms)
+
+
+Started PUT "/beers/console/repl_sessions/f4cb7dc1f2471c4123af6a01a17cd405" for ::1 at 2015-08-31 14:33:32 -0400
+
+
+Started GET "/beers/search?utf8=%E2%9C%93&search=raging&filter=Top+Results&commit=Save+changes" for ::1 at 2015-08-31 14:35:06 -0400
+Processing by BeersController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"raging", "filter"=>"Top Results", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "tastings"."beer_api_id" FROM "tastings" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered beers/search.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 187ms (Views: 28.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-08-31 14:35:06 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-31 14:35:06 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-31 14:35:06 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-31 14:35:06 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-08-31 14:35:06 -0400
+
+
+Started POST "/beers" for ::1 at 2015-08-31 14:35:47 -0400
+Processing by BeersController#create as HTML
+  Parameters: {"CBgXPE_name"=>"Rage", "CBgXPE_id"=>"CBgXPE", "CBgXPE_description"=>"", "CBgXPE_abv"=>"14.6", "CBgXPE_image_url"=>"https://s3.amazonaws.com/brewerydbapi/beer/CBgXPE/upload_Y2vkog-large.png", "CBgXPE_brewery_name"=>"Greenbush Brewing Co", "FPMeUT_name"=>"Raging Rhino", "FPMeUT_id"=>"FPMeUT", "FPMeUT_description"=>"", "FPMeUT_abv"=>"5.4", "FPMeUT_image_url"=>"https://s3.amazonaws.com/brewerydbapi/beer/FPMeUT/upload_mHfwBw-large.png", "FPMeUT_brewery_name"=>"McKenzie Brewing Company", "beer_id"=>"oPgTtN", "oPgTtN_name"=>"Ancient Rage", "oPgTtN_id"=>"oPgTtN", "oPgTtN_description"=>"", "oPgTtN_abv"=>"7.5", "oPgTtN_image_url"=>"https://s3.amazonaws.com/brewerydbapi/beer/oPgTtN/upload_V3KgXM-large.png", "oPgTtN_brewery_name"=>"New Albanian Brewing", "T0rtH7_name"=>"Raging Blonde", "T0rtH7_id"=>"T0rtH7", "T0rtH7_description"=>"", "T0rtH7_abv"=>"5.2", "T0rtH7_image_url"=>"https://s3.amazonaws.com/brewerydbapi/beer/T0rtH7/upload_yY2cf6-large.png", "T0rtH7_brewery_name"=>"Veterans United Craft Brewery", "JRqWHZ_name"=>"Road Rage", "JRqWHZ_id"=>"JRqWHZ", "JRqWHZ_description"=>"A big American pale ale that pours a golden amber with a creamy head. This ale is brewed with Centennial, Cascade, and Simcoe hops giving it an intense citrus aroma and a crisp hoppy finish.", "JRqWHZ_abv"=>"5.6", "JRqWHZ_image_url"=>"https://s3.amazonaws.com/brewerydbapi/beer/JRqWHZ/upload_DT2jEe-large.png", "JRqWHZ_brewery_name"=>"450 North Brewing Company", "7GMwim_name"=>"Raging Rhino Red", "7GMwim_id"=>"7GMwim", "7GMwim_description"=>"Deep red-amber color, crisp hoppy aroma, and a luscious combination of roasted toffee and caramel make this Scotish Ale a favorite. \r\n\r\n1991 Great American Beer Festival, Gold Medal.", "7GMwim_abv"=>"", "7GMwim_image_url"=>"", "7GMwim_brewery_name"=>"McKenzie Brewing Company", "9H8jhv_name"=>"Raging River Ale", "9H8jhv_id"=>"9H8jhv", "9H8jhv_description"=>"", "9H8jhv_abv"=>"", "9H8jhv_image_url"=>"", "9H8jhv_brewery_name"=>"Front Street Brewery", "8Frp6E_name"=>"Rage IPA", "8Frp6E_id"=>"8Frp6E", "8Frp6E_description"=>"Simcoe, Centennial and Columbus, in a 150 IBU IPA!!", "8Frp6E_abv"=>"6.2", "8Frp6E_image_url"=>"https://s3.amazonaws.com/brewerydbapi/beer/8Frp6E/upload_0FWvrU-large.png", "8Frp6E_brewery_name"=>"Amnésia Brewery", "P203ye_name"=>"Raging Bitch Belgian IPA", "P203ye_id"=>"P203ye", "P203ye_description"=>"Two inflammatory words... one wild drink. Nectar imprisoned in a bottle. Let it out. It is cruel to keep a wild animal locked up. Uncap it. Release it....stand back!! Wallow in its golden glow in a glass beneath a white foaming head. Remember, enjoying a RAGING BITCH, unleashed, untamed, unbridled- and in heat- is pure GONZO!! It has taken 20 years to get from there to here. Enjoy!", "P203ye_abv"=>"8.3", "P203ye_image_url"=>"https://s3.amazonaws.com/brewerydbapi/beer/P203ye/upload_d1zvzb-large.png", "P203ye_brewery_name"=>"Flying Dog Brewery", "bqpeui_name"=>"O'Fallon Rager Irish Red Ale", "bqpeui_id"=>"bqpeui", "bqpeui_description"=>"", "bqpeui_abv"=>"", "bqpeui_image_url"=>"https://s3.amazonaws.com/brewerydbapi/beer/bqpeui/upload_ouP16c-large.png", "bqpeui_brewery_name"=>"O'Fallon Brewery"}
+  [1m[35mBeer Load (0.7ms)[0m  SELECT  "beers".* FROM "beers" WHERE "beers"."beer_api_id" = $1 LIMIT 1  [["beer_api_id", "oPgTtN"]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."user_id" = $1 AND "tastings"."beer_api_id" = $2[0m  [["user_id", 1], ["beer_api_id", "oPgTtN"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "beers" ("beer_api_id", "name", "description", "abv", "image_url", "brewery_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["beer_api_id", "oPgTtN"], ["name", "Ancient Rage"], ["description", ""], ["abv", "7.5"], ["image_url", "https://s3.amazonaws.com/brewerydbapi/beer/oPgTtN/upload_V3KgXM-large.png"], ["brewery_name", "New Albanian Brewing"], ["created_at", "2015-08-31 18:35:47.600740"], ["updated_at", "2015-08-31 18:35:47.600740"]]
+  [1m[35m (5.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tastings" ("user_id", "beer_id", "beer_api_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 1], ["beer_id", 7], ["beer_api_id", "oPgTtN"], ["created_at", "2015-08-31 18:35:47.614963"], ["updated_at", "2015-08-31 18:35:47.614963"]]
+  [1m[36m (5.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 42ms (ActiveRecord: 14.9ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 14:35:47 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mBeer Load (0.3ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 1]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 1]]
+  [1m[35mTasting Load (0.2ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 2]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 3]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 6]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 7]]
+  Rendered users/show.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 49ms (Views: 39.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/7" for ::1 at 2015-08-31 14:35:53 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 14:35:53 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mBeer Load (0.3ms)[0m  [1mSELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 1]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 2]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 3]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 6]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 7]]
+  Rendered users/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/beers/7" for ::1 at 2015-08-31 14:35:59 -0400
+Processing by BeersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBeer Load (0.2ms)[0m  [1mSELECT  "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."beer_id" = $1  [["beer_id", 7]]
+  Rendered beers/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 43ms (Views: 36.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-31 14:39:41 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mBeer Load (0.2ms)[0m  [1mSELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mTasting Load (0.2ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 1]]
+  [1m[36mTasting Load (0.2ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 2]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 3]]
+  [1m[36mTasting Load (0.1ms)[0m  [1mSELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1[0m  [["beer_id", 6]]
+  [1m[35mTasting Load (0.1ms)[0m  SELECT "tastings".* FROM "tastings" WHERE "tastings"."beer_id" = $1  [["beer_id", 7]]
+  Rendered users/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/beers/6" for ::1 at 2015-08-31 14:40:04 -0400
+Processing by BeersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBeer Load (0.2ms)[0m  [1mSELECT  "beers".* FROM "beers" WHERE "beers"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."beer_id" = $1  [["beer_id", 6]]
+  Rendered beers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.3ms)

@@ -14,6 +14,9 @@
    			 		<input type="hidden" name="<%=beer["id"]%>_name" value="<%=beer["name"]%>">
     				<input type="hidden" name="<%=beer["id"]%>_id" value="<%=beer["id"]%>">
     				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
+    				<input type="hidden" name="<%=beer["id"]%>_abv" value="<%=beer["abv"]%>">
+    				<input type="hidden" name="<%=beer["id"]%>_image_url" value="<%=beer["labels"]["large"] if beer["labels"] %>">
+    				<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"]%>">
 				<% end %>
 
 				<button>Add Selected Beer to Tastings</button>

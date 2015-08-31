@@ -1,11 +1,11 @@
 <html>
 	<body>
 
-<p>Beer Name: <%= beers.name %></p>
-<p> Beer Description: <%= beers.description %></p>
-<p>Beer ABV.: <%= beers.abv %></p>
-<p><img src="<%= beer.image_url %>"></p>
-<p>Brewery: <%= beer.brewery_name %></p>
+<p>Beer Name: <%= @beer.name %></p>
+<p> Beer Description: <%= @beer.description %></p>
+<p>Beer ABV.: <%= @beer.abv %></p>
+<p><img src="<%= @beer.image_url %>"></p>
+<p>Brewery: <%= @beer.brewery_name %></p>
 <BR><BR>
 
 <p>Comments:</p>
@@ -19,7 +19,7 @@
 		<textarea name="content" placeholder="What would you like to say?"></textarea>
 		</br>
 		<button>Submit comment</button>
-		<input type="hidden" name="beer_id" value="<%= beer.id %>">
+		<input type="hidden" name="beer_id" value="<%= @beer.id %>">
 	</form>
 
 	</body>
@@ -58,36 +58,3 @@
 
 
 
-[<h1>Beer name:<%= %></h1>
-<h2>Beer stat:<%= %></h2>
-
-
-
-
-
-<h1><%= @venue.name %></h1>
-<h3><%= @venue.city %>, <%= @venue.state %></h3>
-<% if @venue.family_friendly %>
-	<p>It's Family Friendly!</p>
-<% else %>
-	<p>Caution: NOT Family Friendly!</p>
-<% end %>
-
-<%= link_to "Edit", edit_venue_path %> <br><br>
-<%= link_to "Create New Event", new_event_path %> <br>
-
-
-<h2>Events:</h2>
-
-<% @venue.events.each do |event| %>
-<h3><%= link_to event.date, event_path(event.id) %></h3>
-
-<h4>Performed by: <%= link_to event.group.name, group_path(event.group.id) %></h4>
-<% if event.alcohol_served %>
-<p>Alcohol Available</p>
-<% else %>
-<p>Alcohol Not Available</p>
-<% end %>
-<% end %>
-<br><br><br>
-<%= link_to "Delete Venue", venue_path, method: :delete %>
