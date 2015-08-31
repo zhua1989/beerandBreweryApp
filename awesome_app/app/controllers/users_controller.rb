@@ -8,8 +8,9 @@ class UsersController < ApplicationController
 
   def create
     new_user = User.create(name: params[:name].downcase, password: params[:password], image_url: params[:image_url])
-
-    redirect_to user_path
+ 	user = User.find_by({name: params[:name]})
+    session[:user_id] = user.id
+    redirect_to user_path(user)
   end
 
 
