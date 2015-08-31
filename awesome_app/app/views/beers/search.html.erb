@@ -10,10 +10,10 @@
 		<ul>
 			<form action="/beers" method="POST">
 				<% @beers.each_with_index do |beer, i| %>
-					<input type="radio" name="beer_id" value="<%=beer.id%>" <%= "ckecked" if i == 0 %> <%= "disabled" if @alreadyTasted[i] == true %> > <%= beer.name %>
-   			 		<input type="hidden" name="<%=beer.id%>_name" value="<%=beer.name%>">
-    				<input type="hidden" name="<%=beer.id%>_id" value="<%=beer.id%>">
-    				<input type="hidden" name="<%=beer.id%>_description" value="<%=beer.description%>">
+					<input type="radio" name="beer_id" value="<%=beer["id"]%>" <%= "checked" if i == 0 %> <%= "disabled" if @alreadyTasted[i] == true %> > <%= beer["name"] %>
+   			 		<input type="hidden" name="<%=beer["id"]%>_name" value="<%=beer["name"]%>">
+    				<input type="hidden" name="<%=beer["id"]%>_id" value="<%=beer["id"]%>">
+    				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
 				<% end %>
 			</form>
 			<br>
