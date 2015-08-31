@@ -11,7 +11,7 @@ class UsersController < ApplicationController
  	user = User.find_by({name: params[:name]})
     session[:user_id] = user.id
     redirect_to user_path(user)
-
+  end
 
 
 
