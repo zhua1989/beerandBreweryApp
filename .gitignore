@@ -1,1 +1,3 @@
 awesome_app/config/local_env.yml
+awesome_app/tmp/pids/server.pid
+awesome_app/log/development.log

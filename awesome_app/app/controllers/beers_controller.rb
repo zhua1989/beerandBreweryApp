@@ -1,8 +1,8 @@
 require 'httparty'
 
-class BeersController < Appl
+class BeersController < ApplicationController
+  skip_before_filter :verify_authenticity_token
 
-  icationController
   def search # receives GET request from user#show looking for beers and renders the search results page
 # read API key from config/local_env.yml
     apiKey = ENV["BEER_API_KEY"]
@@ -22,14 +22,25 @@ class BeersController < Appl
       @beers = request["data"].take(15)
       # @alreadyTasted creates an array of true/false based on whether the beer is already User.tastings
       @alreadyTasted = @beers.map { |beer| beersUserTasted.include?(beer["id"]) }
+      puts "~~~~~~~~~~~~~~~~"
+      puts @beers[0]["labels"]["large"]
+      puts "~~~~~~~~~~~~~~~~"
+    
     elsif filter == "Only Name"
       # ternary operatory returns true if the the userQuery is found in the beer.name
-      matches = request["data"].select { |beer| beer.name.chomp.downcase.match(userQuery.downcase) ? true : false}
+      matches = request["data"].select { |beer| beer["name"].chomp.downcase.match(userQuery.downcase) ? true : false}
       @beers = matches.take(15)
       @alreadyTasted = @beers.map { |beer| beersUserTasted.include?(beer["id"]) }
+    
     elsif filter == "Only Description"
       # ternary operatory returns true if the the userQuery is found in the beer.description
-      matches = request["data"].select { |beer| beer.description.chomp.downcase.match(userQuery.downcase) ? true : false}
+      matches = request["data"].select { |beer| 
+        if beer["description"]
+          beer["description"].chomp.downcase.match(userQuery.downcase) ? true : false
+        else
+          false
+        end
+      }
       @beers = matches.take(15)
       @alreadyTasted = @beers.map { |beer| beersUserTasted.include?(beer["id"]) }
     end # end if statement
@@ -38,26 +49,25 @@ class BeersController < Appl
 
   def create
 # grabbing form data based on the value of the radio button that was selected
-    id = params[beer_id]
-    name = params["#{id}_name"]
-    description = params["#{id}_description"]
-    abv = params["#{id}_abv"]
-    image_url = params["#{id}_image_url"]
-    brewery_name = params["#{id}_brewery_name"]
+    id = params[:beer_id]
+    name = params[:"#{id}_name"]
+    description = params[:"#{id}_description"] || "no description provided"
+    abv = params[:"#{id}_abv"]
+    image_url = params[:"#{id}_image_url"]
+    brewery_name = params[:"#{id}_brewery_name"]
 
-    if !Beer.find_by(api_id: id) && !Tasting.where({user_id: session[:user_id], beer_api_id: id})
-      newBeer = Beer.create({api_id: id, name: name, description: description, abv: abv, image_url: image_url, brewery_name: brewery_name})
-      Tasting.create({user_id: session[:user_id], beer_id: newBeer.id})
+    if !Beer.find_by(beer_api_id: id) && Tasting.where({user_id: session[:user_id], beer_api_id: id}).length == 0
+      puts "~~~~~~~~~BEER NOT FOUND~~~~~~~~~~"
+      newBeer = Beer.create({beer_api_id: id, name: name, description: description, abv: abv, image_url: image_url, brewery_name: brewery_name})
+      Tasting.create({user_id: session[:user_id], beer_id: newBeer.id, beer_api_id: id})
     
-    elsif Beer.find_by(api_id: id) && !Tasting.where({user_id: session[:user_id], beer_api_id: id})
-      newBeer = Beer.find_by(api_id: id)
-      Tasting.create({user_id: session[:user_id], beer_id: newBeer.id})
-    
-    else 
-      redirect_to users_path()
+    elsif Beer.find_by(beer_api_id: id) && Tasting.where({user_id: session[:user_id], beer_api_id: id}).length == 0
+      puts "~~~~~~~~~BEER FOUND~~~~~~~~~~"
+      newBeer = Beer.find_by(beer_api_id: id)
+      Tasting.create({user_id: session[:user_id], beer_id: newBeer.id, beer_api_id: id})
     end
-
-# redirect to the user's show page after adding a beer to their collection
+    
+    # redirect to the user's show page after adding a beer to their collection
     redirect_to user_path(session[:user_id])
   end
 
@@ -68,4 +78,5 @@ class BeersController < Appl
 
   def destroy
   end
+
 end

@@ -8,10 +8,11 @@ class UsersController < ApplicationController
     ## Action for creating a new user
   def create
   	## check if the username is already in the database
-  	already_taken = User.find_by({name: params[:name]})
-  	if (params[:name] == already_taken)
+  	already_taken = User.find_by({name: params[:user][:name]})
+  	if (already_taken)
+  		flash[:error] = "Username is already taken"
   		## if the username is present, then redirect to the login page
-  		redirect_to sessions_new_path
+  		redirect_to new_user_path
   	else 
   		## If the username is not present, then it creates their account
 	    @new_user = User.create(user_params)
