@@ -1,14 +1,14 @@
 class UsersController < ApplicationController
 	
-    
+    ## Action for adding a new user for new form
   def new
     @user = User.new
   end
 
-
+    ## Action for creating a new user
   def create
-    new_user = User.create(name: params[:name].downcase, password: params[:password], image_url: params[:image_url])
- 	  user = User.find_by({name: params[:name]})
+    @new_user = User.create(user_params)
+ 	  user = User.find_by({name: params[:user][:name]})
     
     session[:user_id] = user.id
     redirect_to user_path(user)

@@ -1,8 +1,15 @@
 <h2>Add a new account</h2>
 <h3>Enter a username and password to get started</h3>
-<%= form_tag('/users', method: :post) %>
-<%= text_field_tag :name, nil, placeholder: "username" %>
-<%= text_field_tag :image_url, nil, placeholder: "image_url" %>
-<%= password_field_tag :password, nil, placeholder: "password" %>
-<%= password_field_tag :confirm_password, nil, placeholder: "confirm password" %>
-<%= submit_tag "Submit" %>
+
+<%= form_for (@user) do |f| %>
+  <%= f.label :name%>
+  <%= f.text_field :name%>
+  <%= f.label :image_url%>
+  <%= f.text_field :image_url%>
+  <%= f.label :password%>
+  <%= f.password_field :password%>
+  <%= f.label :confirm_password%>
+  <%= f.password_field :confirm_password%>
+  <%=f.submit%>
+
+<% end %>
