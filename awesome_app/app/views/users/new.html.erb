@@ -4,8 +4,8 @@
 <%= form_for (@user) do |f| %>
 
         <% if @user.errors.any? %>
-       <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+       <% @user.errors.each do |msg| %>
+        <li><%= msg.full_messages %></li>
         <% end %>
         <% end %>        
           <%= f.label :name%>
