@@ -13,7 +13,7 @@ Beer.create({name:"Blue Moon Honey Moon Summer Ale",beer_api_id:"PkqhUA", descri
 Beer.create({name:"Anchor Steam",beer_api_id:"Uiol9p", description:"steamy"})
 Beer.create({name:"Miller High Life",beer_api_id:"voS2XG", description:"champagne"})
 Beer.create({name:"Coors Banquet",beer_api_id:"vJCXKD", description:"malty"})
-Beer.create({name:"The Beast",beer_api_id:"OTB5EC", description:"milwaukee's best"})
+Beer.create({name:"The Beast",beer_api_id:"OTB5EC", description:"the beast is a seducer"})
 
 Tasting.create({user_id:1, beer_id:1,beer_api_id:"PkqhUA", tasting_notes:"it was a tuesday"})
 Tasting.create({user_id:1, beer_id:2,beer_api_id:"Uiol9p", tasting_notes:"it was a wednesday"})
