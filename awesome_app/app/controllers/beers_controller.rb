@@ -1,20 +1,20 @@
 require 'httparty'
 
-class BeersController < ActivationController
+class BeersController < ApplicationController
   def search # receives GET request from user#show looking for beers and renders the search results page
 # read API key from config/local_env.yml
     apiKey = ENV["BEER_API_KEY"]
 
 # build the query string
     userQuery = params[:search].chomp
-    APIurl = "http://api.brewerydb.com/v2/search/?key=" + apiKey + "&q='" + userQuery + "'&type=beer&withBreweries=y"
+    @APIurl = "http://api.brewerydb.com/v2/search/?key=" << apiKey << "&q='" << userQuery << "'&type=beer&withBreweries=y"
 
 # hit the API for search results
-    request = HTTParty.get(APIurl)
+    request = HTTParty.get(@APIurl)
 
 # further filter the API results based on the filter param in the search page
     filter = params[:filter]
-    beersUserTasted = User.find_by[session[:user_id]].tastings.pluck(beer_api_id)
+    beersUserTasted = User.find(session[:user_id]).tastings.pluck("beer_api_id")
 
     if filter == "topResults"
       @beers = request.data.take(15)
@@ -55,7 +55,7 @@ class BeersController < ActivationController
     end
 
 # redirect to the user's show page after adding a beer to their collection
-    redirect_to users_path(session[:user_id])
+    redirect_to user_path(session[:user_id])
   end
 
   def show
