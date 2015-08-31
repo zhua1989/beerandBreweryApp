@@ -3,11 +3,12 @@
 
 <%= form_for (@user) do |f| %>
 
-        <% if @user.errors.any? %>
-       <% @user.errors.each do |msg| %>
-        <li><%= msg.full_messages %></li>
+
+        <% if @user.errors.any? %>        
+       <% @user.errors.messages[:name].each do |msg| %>
+        <h4><%= msg %></h4>
         <% end %>
-        <% end %>        
+        <% end %>    
           <%= f.label :name%>
           <%= f.text_field :name%>
           <%= f.label :image_url%>
