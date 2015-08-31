@@ -7,11 +7,19 @@ class UsersController < ApplicationController
 
     ## Action for creating a new user
   def create
-    @new_user = User.create(user_params)
- 	  user = User.find_by({name: params[:user][:name]})
-    
-    session[:user_id] = user.id
-    redirect_to user_path(user)
+  	## check if the username is already in the database
+  	already_taken = User.find_by({name: params[:name]})
+  	if (params[:name] == already_taken)
+  		## if the username is present, then redirect to the login page
+  		redirect_to sessions_new_path
+  	else 
+  		## If the username is not present, then it creates their account
+	    @new_user = User.create(user_params)
+	 	user = User.find_by({name: params[:user][:name]})
+	 	## Start the session for the user
+		session[:user_id] = user.id
+		redirect_to user_path(user)
+	end
   end
 
 
