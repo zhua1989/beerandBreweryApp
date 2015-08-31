@@ -18,6 +18,7 @@ class BeersController < ApplicationController
 
     if filter == "topResults"
       @beers = request.data.take(15)
+      # @alreadyTasted creates an array of true/false based on whether the beer is already User.tastings
       @alreadyTasted = @beers.map { |beer| beersUserTasted.include?(beer.id) }
     elsif filter == "onlyName"
       # ternary operatory returns true if the the userQuery is found in the beer.name
