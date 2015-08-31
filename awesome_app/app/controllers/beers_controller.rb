@@ -1,6 +1,11 @@
 require 'httparty'
 
 class BeersController < ApplicationController
+<<<<<<< HEAD
+=======
+
+  
+>>>>>>> sprockets
   def search # receives GET request from user#show looking for beers and renders the search results page
 # read API key from config/local_env.yml
     apiKey = ENV["BEER_API_KEY"]
