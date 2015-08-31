@@ -1,6 +1,7 @@
 require 'httparty'
 
 class BeersController < ApplicationController
+
   skip_before_filter :verify_authenticity_token
 
   def search # receives GET request from user#show looking for beers and renders the search results page
