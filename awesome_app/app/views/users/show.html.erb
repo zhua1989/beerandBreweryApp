@@ -37,8 +37,11 @@
     <div class="find">
     	<%= form_tag "/beers/search", method: :GET do %>
     		Add a beer!
+    		Top Results
     		<%= text_field_tag :search %>
-    		<%= submit_tag %>
+    		<%= select_tag "filter", options_for_select([ "Top Results", "Only Name", "Only Description" ], "Top Results") %>
+	    		<%= submit_tag %>
+
     	<% end %>
     </div>
 
