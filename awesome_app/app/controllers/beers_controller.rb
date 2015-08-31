@@ -1,8 +1,6 @@
 require 'httparty'
 
-class BeersController < Appl
-
-  icationController
+class BeersController < ApplicationController
   def search # receives GET request from user#show looking for beers and renders the search results page
 # read API key from config/local_env.yml
     apiKey = ENV["BEER_API_KEY"]
@@ -22,14 +20,22 @@ class BeersController < Appl
       @beers = request["data"].take(15)
       # @alreadyTasted creates an array of true/false based on whether the beer is already User.tastings
       @alreadyTasted = @beers.map { |beer| beersUserTasted.include?(beer["id"]) }
+    
     elsif filter == "Only Name"
       # ternary operatory returns true if the the userQuery is found in the beer.name
-      matches = request["data"].select { |beer| beer.name.chomp.downcase.match(userQuery.downcase) ? true : false}
+      matches = request["data"].select { |beer| beer["name"].chomp.downcase.match(userQuery.downcase) ? true : false}
       @beers = matches.take(15)
       @alreadyTasted = @beers.map { |beer| beersUserTasted.include?(beer["id"]) }
+    
     elsif filter == "Only Description"
       # ternary operatory returns true if the the userQuery is found in the beer.description
-      matches = request["data"].select { |beer| beer.description.chomp.downcase.match(userQuery.downcase) ? true : false}
+      matches = request["data"].select { |beer| 
+        if beer["description"]
+          beer["description"].chomp.downcase.match(userQuery.downcase) ? true : false
+        else
+          false
+        end
+      }
       @beers = matches.take(15)
       @alreadyTasted = @beers.map { |beer| beersUserTasted.include?(beer["id"]) }
     end # end if statement
