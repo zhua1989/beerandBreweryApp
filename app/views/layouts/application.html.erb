@@ -17,7 +17,7 @@
       <div class="navbar-header navbar-brand">The Awesome Beer App</div>
       <div>
         <ul class="nav navbar-nav">
-          <li><%=link_to("Your Beer Collection", user_path) %></li>
+          <li><%=link_to("Your Beer Collection", user_path(session[:user_id])) %></li>
           <li>Hello</li>
           <li><%=link_to("Log Out", "/sessions", method: :delete) %></li>
         </ul>
