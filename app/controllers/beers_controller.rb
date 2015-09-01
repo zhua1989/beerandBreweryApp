@@ -75,6 +75,7 @@ class BeersController < ApplicationController
   end
 
   def show
+    #logic to see if there is a currrent session
     if session[:user_id] == nil
       redirect_to root_path
     else

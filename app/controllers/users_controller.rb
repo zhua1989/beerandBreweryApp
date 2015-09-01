@@ -28,9 +28,11 @@ class UsersController < ApplicationController
 
 
   def show
+    ##Check to see if there is a session.  If not logged in don't let person go to User Paths
     if session[:user_id] == nil
       redirect_to root_path
-    elsif logged_in? && check_current_user?  #this is our definition of logged in
+    ##Checkt to see if logged in if logged in eventually redirect to the user show page
+    elsif logged_in? && check_current_user?
     actual_user = User.find(session[:user_id])
         @current_user = User.find(session[:user_id])
         @beers = @current_user.beers
