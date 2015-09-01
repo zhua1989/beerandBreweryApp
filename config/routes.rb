@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-<<<<<<< HEAD
   root 'welcome#index'
 
   get '/beers/search' => 'beers#search'
@@ -22,9 +21,8 @@ Rails.application.routes.draw do
   post '/sessions' => 'sessions#create'
   delete '/sessions' => 'sessions#destroy'
 
-=======
+
   # root 'welcome#index'
->>>>>>> b8b7660dbf352ad5ab7028027078c4ffc44dbd87
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -75,7 +73,4 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 end
-<<<<<<< HEAD
 
-=======
->>>>>>> b8b7660dbf352ad5ab7028027078c4ffc44dbd87
