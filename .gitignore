@@ -10,10 +10,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
-<<<<<<< HEAD
+
 **/tmp
 
-awesome_app/config/local_env.yml
-=======
+/config/local_env.yml
+
 /tmp
->>>>>>> b8b7660dbf352ad5ab7028027078c4ffc44dbd87

@@ -1,27 +1,27 @@
 <html>
 	<body>
 
-<p>Beer Name: <%= @beer.name %></p>
-<p> Beer Description: <%= @beer.description %></p>
-<p>Beer ABV.: <%= @beer.abv %></p>
-<p><img src="<%= @beer.image_url %>"></p>
-<p>Brewery: <%= @beer.brewery_name %></p>
-<BR><BR>
+		<p>Beer Name: <%= @beer.name %></p>
+		<p> Beer Description: <%= @beer.description %></p>
+		<p>Beer ABV.: <%= @beer.abv %></p>
+		<p><img src="<%= @beer.image_url %>"></p>
+		<p>Brewery: <%= @beer.brewery_name %></p>
+		<BR><BR>
 
-<p>Comments:</p>
-<% @comments.each do |comment| %>
-<p><%= comment.content %></p>
-<p>Author: <%= comment.user.name %></p>
-<% end %>
+		<p>Comments:</p>
+		<% @comments.each do |comment| %>
+		<p><%= comment.content %></p>
+		<p>Author: <%= comment.user.name %></p>
+		<% end %>
 
-<p>Leave a comment:</p>
+		<p>Leave a comment:</p>
 
 
-	<%= form_tag("/comments", method: "post") do %>
-		<%= text_area_tag(:content) %>
-		<%= hidden_field_tag(:beer_id, @beer.id) %>
-		<%= submit_tag("Leave Comment") %>
-	<% end %>
+			<%= form_tag("/comments", method: "post") do %>
+				<%= text_area_tag(:content) %>
+				<%= hidden_field_tag(:beer_id, @beer.id) %>
+				<%= submit_tag("Leave Comment") %>
+			<% end %>
 
 
 
