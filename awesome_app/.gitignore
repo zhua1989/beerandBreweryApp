@@ -21,6 +21,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
-/tmp
+**/tmp
 
 awesome_app/config/local_env.yml

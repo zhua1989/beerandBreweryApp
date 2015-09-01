@@ -77,6 +77,7 @@ class BeersController < ApplicationController
   def show
     @beer = Beer.find(params[:id])
     @comments = @beer.comments
+    @comment = Comment.new
   end
 
   def destroy

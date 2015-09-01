@@ -8,7 +8,20 @@
 </head>
 <body>
 <% if session[:user_id] %>
-<%=link_to("log out", "/sessions", method: :delete) %>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header navbar-brand">The Awesome Beer App</div>
+      <div>
+        <ul class="nav navbar-nav">
+          <li><%=link_to("Your Beer Collection", user_path) %></li>
+          <li></li>
+          <li><%=link_to("Log Out", "/sessions", method: :delete) %></li>
+        </ul>
+      </div> 
+    </div>
+  </nav>
+
 <% end %>
 
 <%= yield %>
