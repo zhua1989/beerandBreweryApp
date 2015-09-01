@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
 
-
     def logged_in?
       if session[:user_id]
         true
@@ -24,7 +23,4 @@ class ApplicationController < ActionController::Base
       end
 
     end
-  
-
-
 end
