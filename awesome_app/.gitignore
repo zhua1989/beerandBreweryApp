@@ -4,3 +4,7 @@
 /tmp
 /.bundle
 
+/log/*.log
+/tmp
+
+/.ruby-version
