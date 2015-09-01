@@ -16,19 +16,16 @@
     
     <div class="content">
 		<h2>Here are your beers</h2>
-		 <% @beers.each do |beer| %>
+		 <% @tastings.each do |tasting| %>
 		<div class="list">
-				<h3> <%= beer.name %> </h3>
+				<h3> <a href="/beers/<%= tasting.beer_id %>"> <%= tasting.beer.name %> </a></h3>
 				<%= link_to 'Delete', beer_path, method: :delete %>
-				<ul>
-					<% beer.tastings.each do |taste| %> 
-						<li><%= taste.tasting_notes %> </li>
-					<% end %>	
-				</ul>
-
-				<%= form_tag "/beer" do %>
+				<%= tasting.tasting_notes %>
+			
+				<%= form_tag tasting_path(tasting.id), method: :put do %>
+					Tasting notes
 					<%= text_field_tag :tasting_notes %>
-					<%= submit_tag 'Submit Tasting' %>
+					<%= submit_tag %>
 				<% end %>
 			<% end %>
 		</div>

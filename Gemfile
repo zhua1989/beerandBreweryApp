@@ -32,7 +32,7 @@ gem 'httparty'
 
 gem 'pry-rails'
 
-gem 'simple_form'
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'

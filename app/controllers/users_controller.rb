@@ -2,7 +2,7 @@ require ('pry')
 
 
 class UsersController < ApplicationController
-    
+  
     ## Action for adding a new user for new form
   def new
     @user = User.new
@@ -12,17 +12,17 @@ class UsersController < ApplicationController
     ## Action for creating a new user
   def create
     ## check if the username is already in the database
-         @user = User.create(user_params)
+       @user = User.create(user_params)
     if @user.errors.any?
     #   ## if the username is present, then redirect to the login page
       render template: "/users/new"
     else 
       ## If the username is not present, then it creates their account
-           user = User.find_by({name: params[:user][:name]})
-        ## Start the session for the user
-           session[:user_id] = user.id
-           redirect_to user_path(user)
-    end
+       user = User.find_by({name: params[:user][:name]})
+    ## Start the session for the user
+       session[:user_id] = user.id
+       redirect_to user_path(user)
+  end
   end
 
 
@@ -32,14 +32,14 @@ class UsersController < ApplicationController
       if logged_in? && check_current_user? #this is our definition of logged in
         @current_user = User.find(session[:user_id])
         @beers = @current_user.beers
-        
+        @tastings = @current_user.tastings
       else
         redirect_to user_path(actual_user)
       end
     end
 
     def edit
-        @user = User.find(session[:user_id])
+      @user = User.find(session[:user_id])
     end
 
 
@@ -66,4 +66,3 @@ class UsersController < ApplicationController
 
 
   end
-
