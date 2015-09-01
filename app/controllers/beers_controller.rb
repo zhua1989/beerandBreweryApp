@@ -75,9 +75,13 @@ class BeersController < ApplicationController
   end
 
   def show
-    @beer = Beer.find(params[:id])
-    @comments = @beer.comments
-    @comment = Comment.new
+    if session[:user_id] == nil
+      redirect_to root_path
+    else
+      @beer = Beer.find(params[:id])
+      @comments = @beer.comments
+      @comment = Comment.new
+    end
   end
 
   def destroy

@@ -28,15 +28,18 @@ class UsersController < ApplicationController
 
 
   def show
+    if session[:user_id] == nil
+      redirect_to root_path
+    elsif logged_in? && check_current_user?  #this is our definition of logged in
     actual_user = User.find(session[:user_id])
-      if logged_in? && check_current_user? #this is our definition of logged in
         @current_user = User.find(session[:user_id])
         @beers = @current_user.beers
         @tastings = @current_user.tastings
-      else
+    else
         redirect_to user_path(actual_user)
+        puts("HELLO CAT")
       end
-    end
+  end
 
     def edit
       @user = User.find(session[:user_id])
