@@ -7,4 +7,10 @@ class TastingsController < ApplicationController
 		redirect_to user_path(@user)
 	end
 
+  def destroy
+    tasting = Tasting.find(params[:id])
+    tasting.destroy
+    redirect_to user_path(session[:user_id])
+  end
+
 end

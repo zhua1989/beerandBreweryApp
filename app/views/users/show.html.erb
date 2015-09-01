@@ -19,13 +19,13 @@
 		 <% @tastings.each do |tasting| %>
 		<div class="list">
 				<h3> <a href="/beers/<%= tasting.beer_id %>"> <%= tasting.beer.name %> </a></h3>
-				<%= link_to 'Delete', beer_path, method: :delete %>
-				<%= tasting.tasting_notes %>
-			
+				<strong>Tasting notes</strong>
 				<%= form_tag tasting_path(tasting.id), method: :put do %>
-					Tasting notes
-					<%= text_field_tag :tasting_notes %>
+					<%= text_area_tag :tasting_notes, tasting.tasting_notes %>
+					<br>
 					<%= submit_tag %>
+					<br>
+				<%= link_to 'Remove from profile', tasting_path(tasting.id), method: :delete %>
 				<% end %>
 			<% end %>
 		</div>
@@ -33,11 +33,11 @@
 
     <div class="find">
     	<%= form_tag "/beers/search", method: :GET do %>
-    		Add a beer!
-    		Top Results
-    		<%= text_field_tag :search %>
+    		<h4>Add a new beer!</h4>
+    		<p>Choose a search filter</p>
     		<%= select_tag "filter", options_for_select([ "Top Results", "Only Name", "Only Description" ], "Top Results") %>
-	    		<%= submit_tag %>
+    		<%= text_field_tag :search %>
+    		<%= submit_tag "Search for beer"%>
 
     	<% end %>
     </div>
