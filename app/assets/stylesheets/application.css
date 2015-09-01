@@ -13,9 +13,7 @@
  *= require bootstrap
  *= require_tree .
  *= require_self
- *= require ../images/beer.gif
- *= require ../../vendor/assets/stylesheets/bootstrap.css
- *= require ../../vendor/assets/stylesheets/bootstrap-theme.min.css
+ 
 
  */
 
