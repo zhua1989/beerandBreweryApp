@@ -11109,3 +11109,2103 @@ PG::DuplicateDatabase: ERROR:  database "awesome_app_development" already exists
   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "comments" ("user_id", "beer_id", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 2], ["beer_id", 4], ["content", "!! O_o !!"], ["created_at", "2015-08-31 19:08:38.398381"], ["updated_at", "2015-08-31 19:08:38.398381"]]
   [1m[35m (0.3ms)[0m  COMMIT
 >>>>>>> fixed
+
+
+Started DELETE "/sessions" for ::1 at 2015-08-31 16:40:31 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1blYsgVWUYfxdDC15Tw0n/fkb+24a5S3qgqPZyt8V0tr2+dWzQl/86FCHRno9LEkiDNUO0kqNZeuR+hCpZmtuA=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-31 16:40:32 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 162ms (Views: 161.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 16:40:33 -0400
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.6ms)
+
+NoMethodError (undefined method `attr_accessible' for #<Class:0x007fda1425adf0>):
+  app/models/user.rb:12:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:8:in `new'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.0ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.1ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (111.7ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 16:40:33 -0400
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `attr_accessible' for #<Class:0x007fda11a40fb8>):
+  app/models/user.rb:12:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:8:in `new'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (99.8ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 16:41:04 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 52ms (Views: 43.6ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 16:41:18 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pm4YP01A8UXYRrMEKu1MpstF8noqG8Y1xtZNXc5FfUcYDKfbhR/fMYhwnqgnJckdtJLJrNtaZxXCmyp4QKCHtA==", "user"=>{"name"=>"cat", "image_url"=>"cat", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'cat' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 108ms (Views: 29.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 16:41:38 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QKxwymBo2ZEo9MhpsYNrtyhwHaNJ2YDB3X1GMyNj657+zs8uqDf35XjC5cW8S+4MV6cmdbiYIeHZMCEWrYYRbQ==", "user"=>{"name"=>"ben", "image_url"=>"ben", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'ben' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "password_digest", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ben"], ["password_digest", "$2a$10$3uxd2ug3IbMCCoPVOgTy6eCAxwRJwMagQIEV7GjKUAdrRBGzE9NCK"], ["image_url", "ben"], ["created_at", "2015-08-31 20:41:38.893284"], ["updated_at", "2015-08-31 20:41:38.893284"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1[0m  [["name", "ben"]]
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 15967ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/users/6" for ::1 at 2015-08-31 16:41:54 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mBeer Load (0.3ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 59ms (Views: 32.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/ben" for ::1 at 2015-08-31 16:41:54 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"ben"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/6" for ::1 at 2015-08-31 16:41:55 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mBeer Load (0.3ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/sessions" for ::1 at 2015-08-31 16:42:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LbPTSGAc0i/QT8b7OupsFDdFl9epgIgaaj6Ee1jjRS+T0WysqEP8W4B561c3IumvSJKsAVjBKTpuc+Ne1ga/3A=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-31 16:42:28 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 138ms (Views: 137.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 16:42:30 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 49ms (Views: 38.3ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 16:42:38 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4+lXiVgKn7+z/fo1g16Il4cvvXXWYpvBl8YjX7c+/fBdi+htkFWxy+PL15mOlg0s+PiGoycjOuGTi0R6OdsHAw==", "user"=>{"name"=>"ben", "image_url"=>"ben", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'ben' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 124ms (Views: 38.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 16:42:52 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v6ynmOsuuLND44sjKvCaYW5zqcWw1hAMuFGBcrzHnCEBzhh8I3GWxxPVpo8nOB/aEaSSE0GXsSy8HOZXMiJm0g==", "user"=>{"name"=>"blah", "image_url"=>"blah", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'blah' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "password_digest", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "blah"], ["password_digest", "$2a$10$Hn9urLCs6StInHhXJH3TZ.RZVytqUExY7JV46hVvu8ChnrzFjTV46"], ["image_url", "blah"], ["created_at", "2015-08-31 20:42:52.805544"], ["updated_at", "2015-08-31 20:42:52.805544"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1[0m  [["name", "blah"]]
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 77ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/users/7" for ::1 at 2015-08-31 16:42:52 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mBeer Load (0.3ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 7]]
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 69ms (Views: 33.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/blah" for ::1 at 2015-08-31 16:42:52 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"blah"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/7" for ::1 at 2015-08-31 16:42:52 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mBeer Load (0.3ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 7]]
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/sessions" for ::1 at 2015-08-31 16:44:34 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dEILNRTJVOEixXA82nhIPDrI9NKJdKd3ZnfC2jEAYg7KILTR3JZ6lXLzXZDXsM2HRR/PBHg1BldiOqX/v+WY/Q=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-31 16:44:34 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 16:44:36 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 24.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 16:44:43 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pr8to4ytv9/U0UKJGg8Wzu7PCnHn3IbxLN1NiYMiDgmA3ZJHRPKRq4TnbyUXx5N1kRgxpxadJ9EokCqsDcf0+g==", "user"=>{"name"=>"asda", "image_url"=>"asdsa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'asda' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "password_digest", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "asda"], ["password_digest", "$2a$10$DVEjNd/TPsMwatQJmkfZl.5z7Bvv6Iuf3eve2aDVYQ2qJhUn1wN1q"], ["image_url", "asdsa"], ["created_at", "2015-08-31 20:44:43.385427"], ["updated_at", "2015-08-31 20:44:43.385427"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1[0m  [["name", "asda"]]
+Redirected to http://localhost:3000/users/8
+Completed 302 Found in 71ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/8" for ::1 at 2015-08-31 16:44:43 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mBeer Load (0.2ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 8]]
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 36ms (Views: 26.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/asdsa" for ::1 at 2015-08-31 16:44:43 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"asdsa"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+Redirected to http://localhost:3000/users/8
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/8" for ::1 at 2015-08-31 16:44:43 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mBeer Load (0.2ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 8]]
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/sessions" for ::1 at 2015-08-31 16:46:18 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UcNqRb9ZdjDXkc8JtKE9OC2qIOllgFcUipCW0sIA65PvodWhdwZYRIen4qW5abiDUn0bP5TB9jSO3fH3TOURYA=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-31 16:46:18 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 16:46:53 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 23.7ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 16:47:03 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Kbs2XWP0gBTY4bzAN/FaonyitaKp6yBDpZu0gK39zGqX2Ym5q6uuYIjXkWw6Od8ZA3WOdFiqgWOh1tOlIxg2mQ==", "user"=>{"name"=>"lknsd", "image_url"=>"csdcs", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'lknsd' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "password_digest", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "lknsd"], ["password_digest", "$2a$10$utZLM07/UXvxBtZrICCUJ.je0evgrubvqN8iTzOSOchEdhqblld/O"], ["image_url", "csdcs"], ["created_at", "2015-08-31 20:47:03.186182"], ["updated_at", "2015-08-31 20:47:03.186182"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1[0m  [["name", "lknsd"]]
+Redirected to http://localhost:3000/users/9
+Completed 302 Found in 76ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/9" for ::1 at 2015-08-31 16:47:03 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mBeer Load (0.2ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 9]]
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 36ms (Views: 26.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/csdcs" for ::1 at 2015-08-31 16:47:03 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"csdcs"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 9]]
+Redirected to http://localhost:3000/users/9
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users/9" for ::1 at 2015-08-31 16:47:03 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mBeer Load (0.5ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 9]]
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/sessions" for ::1 at 2015-08-31 16:53:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"K5OiLU5pmRzfi74cBfjFJzxHtOrlR+Z4BmnmNIr7U/uV8R3Jhja3aI+9k7AIMECcQ5CPPBQGR1gCJIERBB6pCA=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-31 16:53:27 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 160ms (Views: 159.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 16:53:30 -0400
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.5ms)
+
+NoMethodError (undefined method `attr_accessible' for #<Class:0x007faeab708508>):
+  app/models/user.rb:12:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:8:in `new'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (113.3ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 16:53:31 -0400
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `attr_accessible' for #<Class:0x007faea5a04e60>):
+  app/models/user.rb:12:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:8:in `new'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.7ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (97.9ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 16:54:32 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 55ms (Views: 43.1ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 16:55:00 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dkNmXA4TjdMwY5NfnrGaKjTWY8OLM3QXvanPv5MGkDrIIdm4xkyjp2BVvvOTeR+RSwFYFXpy1Te55KiaHeNqyQ==", "user"=>{"name"=>"brah", "image_url"=>"brah", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'brah' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     5: 
+     6: 
+     7:         <% if @user.errors.any? %>        
+     8:        <% @user.errors.messages[:name].each do |msg| %>
+     9:         <h4><%= msg %></h4>
+    10:         <% end %>
+    11:         <% end %>    
+  app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb___1352279387483064495_70194024705540'
+  app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb___1352279387483064495_70194024705540'
+  app/controllers/users_controller.rb:18:in `create'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.9ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (48.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (100.3ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 16:56:10 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dkNmXA4TjdMwY5NfnrGaKjTWY8OLM3QXvanPv5MGkDrIIdm4xkyjp2BVvvOTeR+RSwFYFXpy1Te55KiaHeNqyQ==", "user"=>{"name"=>"brah", "image_url"=>"brah", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'brah' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 55163ms (ActiveRecord: 5.8ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     5: 
+     6: 
+     7:         <% if @user.errors.any? %>        
+     8:        <% @user.errors.messages[:name].each do |msg| %>
+     9:         <h4><%= msg %></h4>
+    10:         <% end %>
+    11:         <% end %>    
+  app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb___1352279387483064495_70194024705540'
+  app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb___1352279387483064495_70194024705540'
+  app/controllers/users_controller.rb:19:in `create'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (211.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (215.1ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (461.2ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 16:58:59 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dkNmXA4TjdMwY5NfnrGaKjTWY8OLM3QXvanPv5MGkDrIIdm4xkyjp2BVvvOTeR+RSwFYFXpy1Te55KiaHeNqyQ==", "user"=>{"name"=>"brah", "image_url"=>"brah", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'brah' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (17.3ms)
+Completed 500 Internal Server Error in 5922ms (ActiveRecord: 1.5ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     5: 
+     6: 
+     7:         <% if @user.errors.any? %>        
+     8:        <% @user.errors.messages[:name].each do |msg| %>
+     9:         <h4><%= msg %></h4>
+    10:         <% end %>
+    11:         <% end %> 
+  app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb___1352279387483064495_70194098673980'
+  app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb___1352279387483064495_70194098673980'
+  app/controllers/users_controller.rb:19:in `create'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (35.7ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (224.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (185.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.6ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (443.9ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 16:59:43 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dkNmXA4TjdMwY5NfnrGaKjTWY8OLM3QXvanPv5MGkDrIIdm4xkyjp2BVvvOTeR+RSwFYFXpy1Te55KiaHeNqyQ==", "user"=>{"name"=>"brah", "image_url"=>"brah", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'brah' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.8ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     5: 
+     6: 
+     7:         <% if @user.errors.any? %>        
+     8:        <% @user.errors.messages[:name].each do |msg| %>
+     9:         <h4><%= msg %></h4>
+    10:         <% end %>
+    11:         <% end %> 
+  app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb___1352279387483064495_70194098673980'
+  app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb___1352279387483064495_70194098673980'
+  app/controllers/users_controller.rb:18:in `create'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.0ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.9ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:08:06 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dkNmXA4TjdMwY5NfnrGaKjTWY8OLM3QXvanPv5MGkDrIIdm4xkyjp2BVvvOTeR+RSwFYFXpy1Te55KiaHeNqyQ==", "user"=>{"name"=>"brah", "image_url"=>"brah", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'brah' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/Users/AshleyBaird/3rdproject/beerForumApp/awesome_app/app/views/users/new.html.erb:13: syntax error, unexpected keyword_when, expecting keyword_end
+        	 when [:password] 
+        	     ^
+/Users/AshleyBaird/3rdproject/beerForumApp/awesome_app/app/views/users/new.html.erb:19: syntax error, unexpected keyword_end, expecting end-of-input
+         end  
+            ^):
+  app/views/users/new.html.erb:13: syntax error, unexpected keyword_when, expecting keyword_end
+  app/views/users/new.html.erb:19: syntax error, unexpected keyword_end, expecting end-of-input
+  app/controllers/users_controller.rb:18:in `create'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.0ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.1ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.5ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:09:37 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dkNmXA4TjdMwY5NfnrGaKjTWY8OLM3QXvanPv5MGkDrIIdm4xkyjp2BVvvOTeR+RSwFYFXpy1Te55KiaHeNqyQ==", "user"=>{"name"=>"brah", "image_url"=>"brah", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'brah' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 34ms (Views: 30.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:10:31 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hF/qIBrVZFMNIxe4u7TO3ZttJ+U5QTMRxdtHMKiNQUk6PVXE0opKJ10VOhS2fEtm5LocM8gAkjHBliAVJmi7ug==", "user"=>{"name"=>"cat", "image_url"=>"cat", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'cat' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 30ms (Views: 26.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:10:40 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NSmGTbngllizfyP5otqsk8DwWCU+Kyhik56yrX+7R6uLSzmpcb+4LONJDlWvEikovydj889qiUKX09WI8V69WA==", "user"=>{"name"=>"cat", "image_url"=>"cat", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'cat' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:10:56 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IYKVvOgi68X+5cbeQbOoRtsLBYg4JvHtWlyDJpALVKGf4CpYIH3Fsa7T63JMey39pNw+XslnUM1eEeQDHu6uUg==", "user"=>{"name"=>"ben", "image_url"=>"ben", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'ben' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 28ms (Views: 23.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:11:03 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xUJSxCOnG5/EHPROYQz2F95oxFFR7AeZuuF+Hk7NCfl7IO0g6/g165Qq2eJsxHOsob//h6Ctprm+rBk7wCjzCg==", "user"=>{"name"=>"ben", "image_url"=>"ben", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'ben' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:13:03 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9MWXuneKUZyS87nyvZUOfLlj8WyHgh3EGRUS599XE/9Kpyhev9V/6MLFlF6wXYvHxrTKunbDvOQdWHXCUbLpDA==", "user"=>{"name"=>"ben", "image_url"=>"ben", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'ben' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 31ms (Views: 27.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:13:08 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pKocQWJ/INMZ/QrH3NaaZUyGqPp6LGRljps5HHeRi0sayKOlqiAOp0nLJ2vRHh/eM1GTLIttxUWK1l45+XRxuA==", "user"=>{"name"=>"ben", "image_url"=>"ben", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'ben' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 34ms (Views: 30.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:13:28 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V2Q9XXmb9z2AbsjkeWVOSzOjUZMLBml2Tma1FVvnV+HpBoK5scTZSdBY5Uh0rcvwTHRqRfpHyFZKK9Iw1QKtEg==", "user"=>{"name"=>"ashley", "image_url"=>"dfsd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'ashley' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 33ms (Views: 29.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:13:34 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RVwp3cLkP8Fn9UV3Nu4+rFtkABFSStDTK7Kr9fsQBTj7PpY5CrsRtTfDaNs7JrsXJLM7x6MLcfMv/8zQdfX/yw==", "user"=>{"name"=>"ashley", "image_url"=>"dfsd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'ashley' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 28ms (Views: 23.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:14:57 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j39CqCAZJiU7PHCq8BQkTa0EcIGve8OWrk/ljpRHYvYxHf1M6EYIUWsKXQb93KH20tNLV146YraqAoKrGqKYBQ==", "user"=>{"name"=>"ashley", "image_url"=>"dfsd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'ashley' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+     6: 
+     7:         <% if @user.errors.any? %>  
+     8:        		 <%	if @user.errors.messages[:name] %>
+     9:        		 	<% @users.errors.messages[:name].each do |msg| %>
+    10:         			<h4> <%= msg %></h4>
+    11:         		<% end %> 
+    12:         	<% elsif @user.errors.messages[:password] %>
+  app/views/users/new.html.erb:9:in `block in _app_views_users_new_html_erb___1352279387483064495_70194101472760'
+  app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb___1352279387483064495_70194101472760'
+  app/controllers/users_controller.rb:18:in `create'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.9ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.7ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (100.5ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:16:32 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j39CqCAZJiU7PHCq8BQkTa0EcIGve8OWrk/ljpRHYvYxHf1M6EYIUWsKXQb93KH20tNLV146YraqAoKrGqKYBQ==", "user"=>{"name"=>"ashley", "image_url"=>"dfsd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'ashley' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 95783ms (ActiveRecord: 2.3ms)
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+     6: 
+     7:         <% if @user.errors.any? %>  
+     8:        		 <%	if @user.errors.messages[:name] %>
+     9:        		 	<% @users.errors.messages[:name].each do |msg| %>
+    10:         			<h4> <%= msg %></h4>
+    11:         		<% end %> 
+    12:         	<% elsif @user.errors.messages[:password] %>
+  app/views/users/new.html.erb:9:in `block in _app_views_users_new_html_erb___1352279387483064495_70194101472760'
+  app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb___1352279387483064495_70194101472760'
+  app/controllers/users_controller.rb:19:in `create'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.6ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.9ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (100.8ms)
+
+
+Started GET "/users" for ::1 at 2015-08-31 17:19:55 -0400
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:19:59 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/nightblade" for ::1 at 2015-08-31 17:20:00 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"nightblade"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 7ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  app/controllers/users_controller.rb:32:in `show'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.9ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.0ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (97.8ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:20:18 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LYMDbm55WXHpmWjRu1kh1L83d5/6GoWINNGHArMAN+6T4byKpiZ3BbmvRX22kaRvwOBMSQtbJKgwnOAnPeXNHQ==", "user"=>{"name"=>"rabbit", "image_url"=>"rabbit", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'rabbit' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 24460ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    13:         			<h4> <%= msg %></h4>
+    14:         		<% end %> 
+    15:         	<% elsif @user.errors.messages[:password] %>
+    16:         		<% @users.errors.messages[:password].each do |msg| %>
+    17:         			<h4> <%= msg %> </h4>
+    18:         		<% end %>
+    19:         	<% end %>
+  app/views/users/new.html.erb:16:in `block in _app_views_users_new_html_erb___1352279387483064495_70194030172380'
+  app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb___1352279387483064495_70194030172380'
+  app/controllers/users_controller.rb:19:in `create'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (54.8ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.7ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (102.5ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:21:29 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:21:30 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 30ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:21:43 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0JE/Nq15qIoV+JEIDAMXiQB0LWRcl/Y2Yqih7pAJAAFu84DSZSaG/kXOvKQBy5Iyf6MWsq3WVxZm5cbLHuz68g==", "user"=>{"name"=>"ben", "image_url"=>"ben", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'ben' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 24039ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+     9:         	  <h4>Hello</h4>
+    10:         	<% end %> 
+    11:        		 <%	if @user.errors.messages[:name] %>
+    12:        		 	<% @users.errors.messages[:name].each do |msg| %>
+    13:         			<h4> <%= msg %></h4>
+    14:         		<% end %> 
+    15:         	<% elsif @user.errors.messages[:password] %>
+  app/views/users/new.html.erb:12:in `block in _app_views_users_new_html_erb___1352279387483064495_70194030172380'
+  app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb___1352279387483064495_70194030172380'
+  app/controllers/users_controller.rb:19:in `create'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.8ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (48.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (102.2ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:22:07 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0JE/Nq15qIoV+JEIDAMXiQB0LWRcl/Y2Yqih7pAJAAFu84DSZSaG/kXOvKQBy5Iyf6MWsq3WVxZm5cbLHuz68g==", "user"=>{"name"=>"ben", "image_url"=>"ben", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'ben' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.7ms)
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+     9:         	  <h4>Hello</h4>
+    10:         	<% end %> 
+    11:        		 <%	if @user.errors.messages[:name] %>
+    12:        		 	<% @users.errors.messages[:name].each do |msg| %>
+    13:         			<h4> <%= msg %></h4>
+    14:         		<% end %> 
+    15:         	<% elsif @user.errors.messages[:password] %>
+  app/views/users/new.html.erb:12:in `block in _app_views_users_new_html_erb___1352279387483064495_70194030172380'
+  app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb___1352279387483064495_70194030172380'
+  app/controllers/users_controller.rb:18:in `create'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.9ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (103.4ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:25:23 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:25:31 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rYnhn5Dq23aruhSBldWm8BG4Cz/WahvGoG/ej2Is2I0T6157WLX1AvuMOS2YHSNLbm8w6ScruuakIrmq7Mkifg==", "user"=>{"name"=>"ben", "image_url"=>"ben", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'ben' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+     8:         <h1>Het</h1>
+     9:        		 <%	if @user.errors.messages[:name] %>
+    10:        		 <h1>Cool</h1>
+    11:        		 	<% @users.errors.messages[:name].each do |msg| %>
+    12:         			<h4> <%= msg %></h4>
+    13:         		<% end %> 
+    14:         	<% elsif @user.errors.messages[:password] %>
+  app/views/users/new.html.erb:11:in `block in _app_views_users_new_html_erb___1352279387483064495_70194101177160'
+  app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb___1352279387483064495_70194101177160'
+  app/controllers/users_controller.rb:18:in `create'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (102.9ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:29:09 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 32ms (Views: 24.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:29:17 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kBqaC6SCJZTH2+odHDumE7IW0q1dLapZXeJNxgRt65IueCXvbN0L4Jftx7ER8yOozcHpe6xsC3lZryrjiogRYQ==", "user"=>{"name"=>"ben", "image_url"=>"ben", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'ben' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 43766ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+     8:         <h1>Het</h1>
+     9:        		 <%	if @user.errors.messages[:name] %>
+    10:        		 <h1>Cool</h1>
+    11:        		 	<% @users.errors.messages[:name].each do |msg| %>
+    12:         			<h4> <%= msg %></h4>
+    13:         		<% end %> 
+    14:         	<% elsif @user.errors.messages[:password] %>
+  app/views/users/new.html.erb:11:in `block in _app_views_users_new_html_erb___1352279387483064495_70194101177160'
+  app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb___1352279387483064495_70194101177160'
+  app/controllers/users_controller.rb:19:in `create'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (102.7ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:31:02 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 31ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:31:02 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:31:10 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5sDxRjods/pnT2PH2IsPpAC9R4W6IM93AUqLZEBlZEdYok6i8kKdjjd5TmvVQ4off2p8U0thblcFB+xBzoCetA==", "user"=>{"name"=>"ben", "image_url"=>"ben", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'ben' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 5727ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+     5: 
+     6: 
+     7:         <% if @user.errors.any? %> 
+     8:        		 	<% @users.errors.full_messages.each do |msg| %>
+     9:         			<h4> <%= msg %></h4>
+    10:         		<% end %> 
+    11:         <% end %> 
+  app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb___1352279387483064495_70194106689960'
+  app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb___1352279387483064495_70194106689960'
+  app/controllers/users_controller.rb:19:in `create'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.1ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (48.2ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (105.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:31:27 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 34ms (Views: 25.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:31:33 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UOd5fmqVjqeAMkoAmerWRF2jQZQDfT75vUY0K/TGbGbuhcaaosqg09AEZ6yUIlP/InR6QvI8n9m5C1MOeiOWlQ==", "user"=>{"name"=>"ben", "image_url"=>"ben", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'ben' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `any' for #<ActiveModel::Errors:0x007faea447b828>):
+  app/controllers/users_controller.rb:16:in `create'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.8ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (101.8ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:31:51 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 52ms (Views: 39.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:31:57 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CuerFGQA9O3EyPnybwSjchEOBHzfbLcA+q1g33yKeva0hRTwrF/amZT+1F5izCbJbtk/qi4tFiD+4Af68m+ABQ==", "user"=>{"name"=>"ben", "image_url"=>"ben", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'ben' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+     5: 
+     6: 
+     7:         <% if @user.errors.any? %> 
+     8:        		 	<% @users.errors.full_messages.each do |msg| %>
+     9:         			<h4> <%= msg %></h4>
+    10:         		<% end %> 
+    11:         <% end %> 
+  app/views/users/new.html.erb:8:in `block in _app_views_users_new_html_erb___1352279387483064495_70194106689960'
+  app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb___1352279387483064495_70194106689960'
+  app/controllers/users_controller.rb:18:in `create'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.0ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (112.9ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:32:30 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:32:36 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hcuo08mA96JSVhvzbOBpTzwuVOsYBDazmK9IsbNbe6o7qRc3Ad/Z1gJgNl9hKOz0Q/lvPelFl5Oc4i+UPb6BWQ==", "user"=>{"name"=>"ben", "image_url"=>"ben", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'ben' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:32:55 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K4ZfhBQkA096WJI9PtOTRwuaG6GdlRRVbP3sIY2MJGuV5OBg3HstOypuv5EzGxb8dE0gd2zUtXVosIsEA2nemA==", "user"=>{"name"=>"sada", "image_url"=>"asda", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'sada' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:33:02 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ajqsnebY2XmaucT7qgPBProjG0TKPxaCI49fYvF8VN3UWBN5Lof3DcqP6Veny0SFxfQgkjt+t6InwjhHf5muLg==", "user"=>{"name"=>"sada", "image_url"=>"asda", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'sada' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:33:14 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5qhuBu7nZqqjOeLZujQ1Tj4SOgw3WlwCmUQfawc0lh1YytHiJrhI3vMPz3W3/LD1QcUB2sYb/SKdCXhOidFs7g==", "user"=>{"name"=>"kjnadsjn,djknadsm,", "image_url"=>"lkcdjmcd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'kjnadsjn,djknadsm,' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:33:33 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f4q6GJb2kyzorhTsUBPRDnSxnihFWWhuiErATlEXZ4vB6AX8Xqm9WLiYOUBd21S1C2al/rQYyU6MB6dr3/KdeA==", "user"=>{"name"=>"rhinos", "image_url"=>"rhinos", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'rhinos' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 27.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:33:52 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fkQya6aXHiy1dYCvkNI1in8ZNU4wYZEt6binFJLxKobAJo2PbsgwWOVDrQOdGrAxAM4OmMEgMA3t9cAxHBTQdQ==", "user"=>{"name"=>"rhinos", "image_url"=>"rhinos", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'rhinos' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 30ms (Views: 26.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:34:11 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R04K4GCaU6Jflt6jsjiMOsL6vYWqhD5Rk7KBBreX8GT5LLUEqMV91g+g8w+/8AmBvS2GU1vFn3GX/+YjOXIKlw==", "user"=>{"name"=>"pandas", "image_url"=>"pandas", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'pandas' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:35:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LT7MMUAd0mF8A4WNM0AqgqXqrXrBOei4P4fmWn7dMUGTXHPViEL8FSw1qCE+iK852j2WrDB4SZg7yoF/8DjLsg==", "user"=>{"name"=>"walruses", "image_url"=>"walruses", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'walruses' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 222ms (Views: 174.8ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:36:31 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hEEKes9MtnaXMc8hbV2CwH5DWWgTvGftI4qVi+PjeB46I7WeBxOYAscH4o1glQd7AZRivuL9xs0nx/KubQaC7Q==", "user"=>{"name"=>"walruses", "image_url"=>"walruses", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'walruses' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 37501ms (Views: 47.8ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:39:21 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BULVmgQ7WSQsa99/YMLtabcEv/G4Fx3QpHpdOMA9byK7IGp+zGR3UHxd8tNtCmjSyNOEJ0lWvPCgNzodTtiV0Q==", "user"=>{"name"=>"walruses", "image_url"=>"walruses", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'walruses' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 18113ms (Views: 31.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:39:39 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:39:39 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:39:44 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:39:53 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8Q+MPOE+XLvz0+8COTFsGHKC8RDFOiV70CdvaNQs1hZPbTPYKWFyz6Plwq40+emjDVXKxjR7hFvUaghNWsks5Q==", "user"=>{"name"=>"walrus", "image_url"=>"walrus", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'walrus' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 5119ms (Views: 25.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:40:17 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GTpVCZFPCqcUl6999GkbH2brg8/txx7BxGdMTf/HFb2nWOrtWRAk00ShgtH5oZ6kGTy4GRyGv+HAKitocSLvTg==", "user"=>{"name"=>"walrus", "image_url"=>"walrus", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'walrus' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 56ms (Views: 42.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:40:29 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:40:36 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fqy5aevsa8DBKG0aRQZF+5WXbGyB4OhsaFwBtqSXKlaozgaNI7NFtJEeQLZIzsBA6kBXunChSUxsEWaTKnLQpQ==", "user"=>{"name"=>"walrus", "image_url"=>"walrus", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'walrus' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:40:47 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yO8pg90fTX3PBbSbxXI2L5/9NtPluj0qf2BGkIi74Zp2jZZnFUBjCZ8zmTfIurOU4CoNBRT7nAp7LSG1Bl4baQ==", "user"=>{"name"=>"walrus", "image_url"=>"walrus", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'walrus' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 28ms (Views: 25.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:40:54 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fNOmvweO54xomjyF3kUTZHpVTDpeq1E8WS9uk3BKfsTCsRlbz9HJ+DisESnTjZbfBYJ37K/q8BxdYgm2/q+ENw==", "user"=>{"name"=>"walrus", "image_url"=>"walrus", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'walrus' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 33ms (Views: 28.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:40:59 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gu4YkcIcVfvIDkvonGeDnUVE6PxcKJ+DdB/hPqAwvns8jKd1CkN7j5g4ZkSRrwYmOpPTKq1pPqNwUoYbLtVEiA==", "user"=>{"name"=>"walrus", "image_url"=>"walrus", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'walrus' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 26.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:44:18 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rc9/oeLN9eipD1YTTvMlaBBNjdH2xgmn73HY0hY7pH0TrcBFKpLbnPk5e79DO6DTb5q2BweHqIfrPL/3mN5ejg==", "user"=>{"name"=>"ashley", "image_url"=>"aasd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'ashley' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:45:41 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sL2Rr8GqqjwFFN93crdAGxlQw8xxJRZmJTfQMMp14H8O3y5LCfWESFUi8tt/f8WgZof4GoBkt0YhercVRJAajA==", "user"=>{"name"=>"rufus", "image_url"=>"rufus", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'rufus' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 41ms (Views: 23.9ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:49:16 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QkDdBxU9KPNiiCz8PHT6tJAcurnD99mYG0hcGAq9VbL8ImLj3WIGhzK+AVAxvH8P78uBbzK2eLgfBTs9hFivQQ==", "user"=>{"name"=>"rufus", "image_url"=>"rufus", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'rufus' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "password_digest", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "rufus"], ["password_digest", "$2a$10$3EfGLIDdpm/aG7.ngkPcNOrTAb20LfxX3KPc.ObkXBtCfkRC2SjVu"], ["image_url", "rufus"], ["created_at", "2015-08-31 21:49:16.541168"], ["updated_at", "2015-08-31 21:49:16.541168"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1[0m  [["name", "rufus"]]
+Redirected to http://localhost:3000/users/10
+Completed 302 Found in 92ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/users/10" for ::1 at 2015-08-31 17:49:16 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mBeer Load (0.8ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 10]]
+  Rendered users/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 59ms (Views: 27.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/rufus" for ::1 at 2015-08-31 17:49:16 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"rufus"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/users/10
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/10" for ::1 at 2015-08-31 17:49:16 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mBeer Load (0.2ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 10]]
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/sessions" for ::1 at 2015-08-31 17:49:20 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"f9ktVZqNNNjvAi8V/HTxoPphlgps9GkLsdGmi+fdZbHBu5KxUtIarL80ArnxvHQbhbat3J21yCu1nMGuaTifQg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-31 17:49:20 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:49:22 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:49:31 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D+K9T6lGw6JkB3U+snm5ymmnDM3qR6RyshPM5gv+x0mxgAKrYRnt1jQxWJK/sTxxFnA3GxsGBVK2XqvDhRs9ug==", "user"=>{"name"=>"rufus", "image_url"=>"rufus", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'rufus' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 103ms (Views: 24.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:49:47 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hUKyMRTi2UAq3W92qrZN3mwfXavxXBZgWdViBWPo9S47IA3V3L33NHrrQtqnfshlE8hmfQAdt0BdmAUg7Q0P3Q==", "user"=>{"name"=>"wally", "image_url"=>"wally", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'wally' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("name", "password_digest", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "wally"], ["password_digest", "$2a$10$.V7YeFllaiZd1YmMZE.BZ..BY6xwRaGCjq67aG4rm7sUUiF7CdzKa"], ["image_url", "wally"], ["created_at", "2015-08-31 21:49:47.612742"], ["updated_at", "2015-08-31 21:49:47.612742"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1  [["name", "wally"]]
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 71ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/users/11" for ::1 at 2015-08-31 17:49:47 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mBeer Load (0.2ms)[0m  [1mSELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1[0m  [["user_id", 11]]
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/wally" for ::1 at 2015-08-31 17:49:47 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"wally"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/11" for ::1 at 2015-08-31 17:49:47 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mBeer Load (0.2ms)[0m  [1mSELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1[0m  [["user_id", 11]]
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/sessions" for ::1 at 2015-08-31 17:49:56 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9fvLm1MThUpiY1uk3Pdg/+U+dKmhpsSg1rqaPeAgcQFLmXR/m0yrPjJVdgjRP+VEmulPf1DnZYDS9/0YbsWL8g=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-31 17:49:56 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:49:57 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 28ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:50:05 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NRIL6WIM+WR0vQ9YD6hdG4SOtsP3wHv6OC0PptkIN86LcLQNqlPXECSLIvQCYNig+1mNFQaB2to8YGiDV+3NPQ==", "user"=>{"name"=>"wa", "image_url"=>"asdas", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'wa' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "password_digest", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "wa"], ["password_digest", "$2a$10$Quv1qd7HCljDgcnE6i6ifey053BybdcLX7Q4Z68C8s.WG4.L9Qhfm"], ["image_url", "asdas"], ["created_at", "2015-08-31 21:50:05.938494"], ["updated_at", "2015-08-31 21:50:05.938494"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1  [["name", "wa"]]
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 70ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/12" for ::1 at 2015-08-31 17:50:05 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mBeer Load (0.3ms)[0m  [1mSELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1[0m  [["user_id", 12]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/asdas" for ::1 at 2015-08-31 17:50:06 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"asdas"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 12]]
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/12" for ::1 at 2015-08-31 17:50:06 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mBeer Load (0.3ms)[0m  [1mSELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1[0m  [["user_id", 12]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/sessions" for ::1 at 2015-08-31 17:50:08 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IWQp2sJHe9HvBHOSpPS2BReHwGK40GFNGIdnH2wmvqmfBpY+ChhVpb8yXj6pPDO+aFD7tEmRwG0cygA64sNEWg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-31 17:50:08 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:50:31 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 32ms (Views: 24.8ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:50:53 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+dJ8ep8Iy8gff8D0ip+KeU6MQqZcKB73h7yxF9/fb6dhfYVIiMNW3BL0q/f4vuSmu0K3GgxAVvaU5Xh0ZqHTQ==", "user"=>{"name"=>"ilya", "image_url"=>"ilya", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'ilya' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 29ms (Views: 25.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:50:59 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E2CtxnGVca+FrqDK0dfnzOyofjVdyNHXEY0WgYsafbetAhIiucpf29WYjWbcH2J3k39F46yJcPcVwHGkBf+HRA==", "user"=>{"name"=>"ilya", "image_url"=>"ilya", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'ilya' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 29ms (Views: 24.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:51:16 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 30.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:51:16 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:51:29 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zJyZrUBByddpwLSXP0GYmnVkh1+YL+N2GfcCX+UUd5Fy/iZJiB7nozn2mTsyiR0hCrO8iWluQlYdumV6a/GNYg==", "user"=>{"name"=>"tresa", "image_url"=>"tresa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'tresa' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "password_digest", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "tresa"], ["password_digest", "$2a$10$EeypHZYAix7P/R.fapOV2OcVMe2SzG.9OtLr7f7ZzGOjGgOsJU1e2"], ["image_url", "tresa"], ["created_at", "2015-08-31 21:51:29.711418"], ["updated_at", "2015-08-31 21:51:29.711418"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1  [["name", "tresa"]]
+Redirected to http://localhost:3000/users/13
+Completed 302 Found in 75ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users/13" for ::1 at 2015-08-31 17:51:29 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mBeer Load (0.2ms)[0m  [1mSELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1[0m  [["user_id", 13]]
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 33ms (Views: 23.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/tresa" for ::1 at 2015-08-31 17:51:29 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"tresa"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+Redirected to http://localhost:3000/users/13
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/13" for ::1 at 2015-08-31 17:51:29 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mBeer Load (0.2ms)[0m  [1mSELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1[0m  [["user_id", 13]]
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/sessions" for ::1 at 2015-08-31 17:52:13 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WvYGsQOAGdIvyDUFAURTfEhKOZ7akFK1cQOaGY1qZMTklLlVy983pn/+GKkMjNbHN50CSCvR85V1Tv08A4+eNw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-31 17:52:13 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:52:15 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 35ms (Views: 26.9ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:52:23 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RxNeuccxngyYaTvUjDQK7aR8YwDsVDPiiP8boS04g535ceFdD26weMhfFniB/I9W26tY1h0VksKMsnyEo915bg==", "user"=>{"name"=>"ani", "image_url"=>"ani", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'ani' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "password_digest", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "ani"], ["password_digest", "$2a$10$gs1jeTo2dBlemNorz8qd7eP2wkAWAZDIuirw8wD7DdtPoKVO3p/d."], ["image_url", "ani"], ["created_at", "2015-08-31 21:52:23.340246"], ["updated_at", "2015-08-31 21:52:23.340246"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1  [["name", "ani"]]
+Redirected to http://localhost:3000/users/14
+Completed 302 Found in 85ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/users/14" for ::1 at 2015-08-31 17:52:23 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 14]]
+  [1m[36mBeer Load (0.2ms)[0m  [1mSELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1[0m  [["user_id", 14]]
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 35ms (Views: 24.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/ani" for ::1 at 2015-08-31 17:52:23 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"ani"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 14]]
+Redirected to http://localhost:3000/users/14
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/14" for ::1 at 2015-08-31 17:52:23 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 14]]
+  [1m[36mBeer Load (0.3ms)[0m  [1mSELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1[0m  [["user_id", 14]]
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/sessions" for ::1 at 2015-08-31 17:52:26 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Tp/BjWQxY4qLmw1zuokv/N5MXQMKCPzK3IxWv6j8miDw/X5prG5N/tutIN+3QapHoZtm1ftJXerYwTGaJhlg0w=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-31 17:52:27 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:52:43 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 37ms (Views: 27.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:52:49 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ufgwz62B7MJASDB3KMI1Euvz95sjaWdVrfL8wSr4tdDvmo8rZd7CthB+HdslCrCplCTMTdIoxnWpv5vkpB1PIw==", "user"=>{"name"=>"pegah", "image_url"=>"pegah", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'pegah' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:52:56 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cZfe9aERAYBZpJurhlhj8TyHiX/Wb5KDDfYpxS2eAzXP9WERaU4v9AmStgeLkOZKQ1CyqScuM6MJu07go3v5xg==", "user"=>{"name"=>"pegah", "image_url"=>"pegah", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'pegah' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:53:28 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lq/GiSE3h7a6PFoKQE9fFVnTRGHT5ggzwAm1YG1dYAwozXlt6WipwuoKd6ZNh9quJgR/tyKnqRPERNJF47ia/w==", "user"=>{"name"=>"pegah", "image_url"=>"pegah", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'pegah' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "password_digest", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "pegah"], ["password_digest", "$2a$10$Eaz1ogENjPBBlV2l/NEWw.9knNtj8xi88BkmHrZtGBd39cjPKgeqe"], ["image_url", "pegah"], ["created_at", "2015-08-31 21:53:28.837003"], ["updated_at", "2015-08-31 21:53:28.837003"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1  [["name", "pegah"]]
+Redirected to http://localhost:3000/users/15
+Completed 302 Found in 80ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/users/15" for ::1 at 2015-08-31 17:53:28 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mBeer Load (0.2ms)[0m  [1mSELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1[0m  [["user_id", 15]]
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 35ms (Views: 25.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/pegah" for ::1 at 2015-08-31 17:53:28 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"pegah"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 15]]
+Redirected to http://localhost:3000/users/15
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users/15" for ::1 at 2015-08-31 17:53:29 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mBeer Load (0.1ms)[0m  [1mSELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1[0m  [["user_id", 15]]
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/sessions" for ::1 at 2015-08-31 17:54:06 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+oP78XhLR9JdD5r4Qjb2QhQawC1FiLEMeBB/kS8dz61E4UQVsBRppg05t1RP/nP5a837+7TJECx8XRi0ofg1Xg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-31 17:54:06 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:54:15 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 32.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:54:40 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RwTU5PpveUW8X9MrC4q+EnzRVclw6AcwAxId2Q4rckb5ZmsAMjBXMexp/ocGQjupAwZuH4GpphAHX3r8gM6ItQ==", "user"=>{"name"=>"amanda", "image_url"=>"amanda", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'amanda' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 28ms (Views: 24.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 17:54:47 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7k/Jbxo3IaMzEDKSOoLSXZeEr1tbiPwWALXOaclR0TtQLXaL0mgP12MmHz43Slfm6FOUjarJXTYE+KlMR7QryA==", "user"=>{"name"=>"amanda", "image_url"=>"amanda", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'amanda' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:56:27 -0400
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.0ms)
+
+NoMethodError (undefined method `attr_accessible' for #<Class:0x007fdc33be2ca8>):
+  app/models/user.rb:12:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:8:in `new'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.2ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (110.5ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 17:56:27 -0400
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.3ms)
+
+NoMethodError (undefined method `attr_accessible' for #<Class:0x007fdc2e829648>):
+  app/models/user.rb:12:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:8:in `new'
+
+
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (48.1ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/AshleyBaird/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (102.5ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 18:03:17 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 199ms (Views: 175.1ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 18:03:28 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UecsuGEGpOccR1Czq00TnfVJKM6Sw0IX/5fcOETsrYvvhZNcqVmKk0xxfR+mhZYmip4TGGOC4zf72rsdyglXeA==", "user"=>{"name"=>"amanda", "image_url"=>"amanda", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+WARNING: Can't mass-assign protected attributes for User: name, password, image_url
+	app/controllers/users_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 47ms (Views: 30.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 18:03:39 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rm0a8C0/Sw2Iu3pkrSa07z7jlUK21ozamWAqxBzYl1gQD6UU5WBlediNV8ig7jFUQTSulEeXLfqdLU3hkj1tqw==", "user"=>{"name"=>"amanda", "image_url"=>"amanda", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+WARNING: Can't mass-assign protected attributes for User: name, password, image_url
+	app/controllers/users_controller.rb:15:in `create'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 45ms (Views: 41.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 18:04:28 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 55ms (Views: 40.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 18:04:36 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rCjBXj3CfUFrR2HeBzlUrCIsoTmxRERtTuldtLm6DE0SSn669Z1TNTtxTHIK8dEXXfua70AF5U1KpDqRN1/2vg==", "user"=>{"name"=>"amanda", "image_url"=>"amanda", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+WARNING: Can't mass-assign protected attributes for User: name, password, image_url
+	app/controllers/users_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 36ms (Views: 31.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 18:04:48 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7u9+gKSUL5ORvdWFFa2wb699OKD/4EQ3frbGEK3foNdQjcFkbMsB58GL+CkYZTXU0KoDdg6h5Rd6+6E1IzpaJA==", "user"=>{"name"=>"amanda", "image_url"=>"amanda", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+WARNING: Can't mass-assign protected attributes for User: name, password, image_url
+	app/controllers/users_controller.rb:15:in `create'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 26ms (Views: 21.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 18:04:51 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 18:05:00 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ewPj7Z1KOjNTnz2VDz1cusPERSuGIrlk1xuuPy8hDAvFYVwJVRUURwOpEDkC9dkBvBN+/XdjGETTVskaocT2+A==", "user"=>{"name"=>"amanda", "image_url"=>"amanda", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+WARNING: Can't mass-assign protected attributes for User: name, password, image_url
+	app/controllers/users_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 33ms (Views: 27.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for ::1 at 2015-08-31 18:06:53 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 35ms (Views: 27.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for ::1 at 2015-08-31 18:07:03 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ONe4wFJ5tghu5aLEihP/8AAvRq56LR6IgmkIeRnVbteGtQckmiaYfD7Tj2iH23pLf/h9eItsv6iGJG9clzCUJA==", "user"=>{"name"=>"amanda", "image_url"=>"amanda", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'amanda' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "password_digest", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "amanda"], ["password_digest", "$2a$10$KeMRgzP/OLQIhKSkv/y0SOViLRbK1GM/h6R70sTJMDvquq/j4eYIi"], ["image_url", "amanda"], ["created_at", "2015-08-31 22:07:03.375274"], ["updated_at", "2015-08-31 22:07:03.375274"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1[0m  [["name", "amanda"]]
+Redirected to http://localhost:3000/users/16
+Completed 302 Found in 83ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/users/16" for ::1 at 2015-08-31 18:07:03 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mBeer Load (0.5ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 16]]
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 42ms (Views: 28.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/amanda" for ::1 at 2015-08-31 18:07:03 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"amanda"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 16]]
+Redirected to http://localhost:3000/users/16
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/16" for ::1 at 2015-08-31 18:07:03 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mBeer Load (0.2ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 16]]
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/sessions" for ::1 at 2015-08-31 18:07:05 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pTecQSEn4+zDXkzMKL/4KT8AfYAYFEFDTwF5YIkt6qYbVSOl6XjNmJNoYWAld32SQNdGVulV4GNLTB5FB8gQVQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-08-31 18:07:05 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-09-01 08:35:07 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 115ms (Views: 62.7ms | ActiveRecord: 19.9ms)
+
+
+Started POST "/users" for ::1 at 2015-09-01 08:35:17 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XmfAMhZJtYDOs/3Uz/iUzUp3xNQsoKrAk4bFiqRxTgngBX/W3hab9J6F0HjCMBF2NaD/At3hC+CXy6KvKpS0+g==", "user"=>{"name"=>"blurh", "image_url"=>"blurg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'blurh' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 120ms (Views: 46.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for ::1 at 2015-09-01 08:35:22 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WB5g3Csj5SUHlZQCi0OSy2lzL/O0OpkLNyFIMGQ+Q6jmfN8443zLUVejua6GixdwFqQUJUV7OCszbC8V6tu5Ww==", "user"=>{"name"=>"blurh", "image_url"=>"blurg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'blurh' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 98ms (Views: 26.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for ::1 at 2015-09-01 08:35:34 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iY113z8rdnK4IPauV3SjYv816Bg+0k4CmMz8jfAGOL4378o793RYBugW2wJavCbZgOLTzs+T7yKcgZuofuPCTQ==", "user"=>{"name"=>"blurh", "image_url"=>"blurg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: password_confirmation
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'blurh' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 137ms (Views: 62.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for ::1 at 2015-09-01 08:36:11 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 46ms (Views: 36.3ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users" for ::1 at 2015-09-01 08:36:16 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FxJipqmyQGETohXpp015r6qr0F1VhmUJpwXxNHYOwh2pcN1CYe1uFUOUOEWqhfwU1Xzri6THxCmjSJYR+Os47g==", "user"=>{"name"=>"a", "image_url"=>"a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."name" = 'a' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 95ms (Views: 26.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2015-09-01 08:36:21 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/FVzjTlXjMXrtobW491mGkf/WjwjEzr2BYOMJD1vwvdCN8xp8QiisbuAq3ruFeOhOChh6tJSm9YBzusBs4o4BA==", "user"=>{"name"=>"a", "image_url"=>"a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'a' LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "users" ("name", "password_digest", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "a"], ["password_digest", "$2a$10$WBie1Jf6.DzkKexYRwMrTuHCSi4qFa5xyv4ti/ClpgBXjodQHiuhi"], ["image_url", "a"], ["created_at", "2015-09-01 12:36:21.168319"], ["updated_at", "2015-09-01 12:36:21.168319"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1[0m  [["name", "a"]]
+Redirected to http://localhost:3000/users/17
+Completed 302 Found in 80ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/users/17" for ::1 at 2015-09-01 08:36:21 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mBeer Load (0.4ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 17]]
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 46ms (Views: 29.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/a" for ::1 at 2015-09-01 08:36:21 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"a"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 17]]
+Redirected to http://localhost:3000/users/17
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/17" for ::1 at 2015-09-01 08:36:21 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mBeer Load (0.3ms)[0m  SELECT "beers".* FROM "beers" INNER JOIN "tastings" ON "beers"."id" = "tastings"."beer_id" WHERE "tastings"."user_id" = $1  [["user_id", 17]]
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/sessions" for ::1 at 2015-09-01 08:36:54 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZD70NenFnGhvW/9ZuBI3rkDLyo/SEeyDZFIx8lsozhLaXEvRIZqyHD9t0vW12rIVPxzxWSNQTaNgH1bX1c004Q=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-09-01 08:36:54 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2015-09-01 08:36:56 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-09-01 08:37:06 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SM3mzEvZlJ48JIR3O5XjO0DNF1mn+vXg/sdbqz9HBRT2r1kog4a66mwSqds2XWaAPxosj1a7VMD6ijyOsaL/5w==", "user"=>{"name"=>"ashley", "image_url"=>"ashley", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."name" = 'ashley' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 103ms (Views: 23.7ms | ActiveRecord: 0.5ms)
