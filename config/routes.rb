@@ -22,11 +22,7 @@ Rails.application.routes.draw do
   delete '/sessions' => 'sessions#destroy'
   put '/tastings/:id' => 'tastings#update', as: :tasting
 
-<<<<<<< HEAD
 
-  # root 'welcome#index'
-=======
->>>>>>> readded user information
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -77,7 +73,4 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 end
-<<<<<<< HEAD
 
-=======
->>>>>>> readded user information
