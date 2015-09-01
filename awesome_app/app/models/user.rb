@@ -8,7 +8,9 @@ class User < ActiveRecord::Base
   has_many :beers, through: :tastings
 
   validates :name, uniqueness: true
-
+  validates :password_confirmation, presence: true
+  
+  
 
 
 end
