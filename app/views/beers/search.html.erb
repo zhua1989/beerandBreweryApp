@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Search</title>
+</head>
+<body>
+	<div class="header">
+		<h1>Here are your searches!</h1>
+	</div>
+	<div class="search">
+		<ul>
+			<form action="/beers" method="POST">
+				<% @beers.each_with_index do |beer, i| %>
+					<input type="radio" name="beer_id" value="<%=beer["id"]%>" <%= "checked" if i == 0 %> <%= "disabled" if @alreadyTasted[i] == true %> > <%= beer["name"] %>
+   			 		<input type="hidden" name="<%=beer["id"]%>_name" value="<%=beer["name"]%>">
+    				<input type="hidden" name="<%=beer["id"]%>_id" value="<%=beer["id"]%>">
+    				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
+    				<input type="hidden" name="<%=beer["id"]%>_abv" value="<%=beer["abv"]%>">
+    				<input type="hidden" name="<%=beer["id"]%>_image_url" value="<%=beer["labels"]["large"] if beer["labels"] %>">
+    				<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"] if beer["breweries"] %>">
+				<% end %>
+
+				<button>Add Selected Beer to Tastings</button>
+			</form>
+			<br>
+		</ul>
+	</div> 
+
+</body>
+</html>

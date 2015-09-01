@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>Profile Page</title>
+</head>
+<body>
+	<div class="header">
+		<h1>Welcome <%= @current_user.name %>!</h1>
+		<img src="<%= @current_user.image_url %>">
+
+		<h6>Change your avatar</h6>
+			<%= form_tag(user_path, method: "put") do %>
+				<%= text_field_tag :image %>
+				<%= submit_tag "Change" %>
+			<% end %>
+	</div>
+    
+    <div class="content">
+		<h2>Here are your beers</h2>
+		 <% @beers.each do |beer| %>
+		<div class="list">
+				<h3> <%= beer.name %> </h3>
+				<%= link_to 'Delete', beer_path, method: :delete %>
+				<ul>
+					<% beer.tastings.each do |taste| %> 
+						<li><%= taste.tasting_notes %> </li>
+					<% end %>	
+				</ul>
+
+				<%= form_tag "/beer" do %>
+					<%= text_field_tag :tasting_notes %>
+					<%= submit_tag 'Submit Tasting' %>
+				<% end %>
+			<% end %>
+		</div>
+    </div>
+
+    <div class="find">
+    	<%= form_tag "/beers/search", method: :GET do %>
+    		Add a beer!
+    		Top Results
+    		<%= text_field_tag :search %>
+    		<%= select_tag "filter", options_for_select([ "Top Results", "Only Name", "Only Description" ], "Top Results") %>
+	    		<%= submit_tag %>
+
+    	<% end %>
+    </div>
+
+</body>
+</html>
+
+

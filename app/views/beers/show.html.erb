@@ -1,0 +1,60 @@
+<html>
+	<body>
+
+<p>Beer Name: <%= @beer.name %></p>
+<p> Beer Description: <%= @beer.description %></p>
+<p>Beer ABV.: <%= @beer.abv %></p>
+<p><img src="<%= @beer.image_url %>"></p>
+<p>Brewery: <%= @beer.brewery_name %></p>
+<BR><BR>
+
+<p>Comments:</p>
+<% @comments.each do |comment| %>
+<p><% comment.content %></p>
+<p>Author: <% comment.user.name %></p>
+<% end %>
+
+<p>Leave a comment:</p>
+	<form action="/comments" method="POST">
+		<textarea name="content" placeholder="What would you like to say?"></textarea>
+		</br>
+		<button>Submit comment</button>
+		<input type="hidden" name="beer_id" value="<%= @beer.id %>">
+	</form>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
