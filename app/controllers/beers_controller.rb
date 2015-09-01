@@ -9,7 +9,7 @@ class BeersController < ApplicationController
     apiKey = ENV["BEER_API_KEY"]
 
 # build the query string
-    userQuery = params[:search].chomp
+    userQuery = params[:search].chomp.gsub(" ","%20")
     @APIurl = "http://api.brewerydb.com/v2/search/?key=" << apiKey << "&q='" << userQuery << "'&type=beer&withBreweries=y"
 
 # hit the API for search results
