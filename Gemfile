@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 
 source 'https://rubygems.org'
 
 
 
+=======
+source 'https://rubygems.org'
+
+
+>>>>>>> b8b7660dbf352ad5ab7028027078c4ffc44dbd87
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use postgresql as the database for Active Record
@@ -26,6 +32,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
+<<<<<<< HEAD
 gem 'bcrypt', '~> 3.1.7'
 
 # Use httpary as the http request getter
@@ -34,6 +41,9 @@ gem 'httparty'
 gem 'pry-rails'
 
 gem 'simple_form'
+=======
+# gem 'bcrypt', '~> 3.1.7'
+>>>>>>> b8b7660dbf352ad5ab7028027078c4ffc44dbd87
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -45,9 +55,12 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
+<<<<<<< HEAD
 
   gem 'protected_attributes'
 
+=======
+>>>>>>> b8b7660dbf352ad5ab7028027078c4ffc44dbd87
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 

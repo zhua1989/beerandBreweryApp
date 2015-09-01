@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+<<<<<<< HEAD
 User.create({name:"brian", password:"12345", image_url:"http://i.giphy.com/nMNzebXyK6fkY.gif"})
 User.create({name:"ashley", password:"23456", image_url:"http://i.giphy.com/sLGSt1R30Api0.gif"})
 
@@ -27,3 +28,5 @@ Comment.create({user_id:1, beer_id:3, content:"extra medium"})
 Comment.create({user_id:2, beer_id:2, content:"yo!"})
 Comment.create({user_id:2, beer_id:3, content:"changed my life!"})
 Comment.create({user_id:2, beer_id:4, content:"!! O_o !!"})
+=======
+>>>>>>> b8b7660dbf352ad5ab7028027078c4ffc44dbd87
