@@ -8,7 +8,7 @@
           <%= form_for (@user) do |f| %>
                   <% if @user.errors.any? %> 
                  		 	<% @user.errors.full_messages.each do |msg| %>
-                  			<h4> <%= msg %></h4>
+                  			<h5 class="animated fadeInLeft"> <%= msg %></h5>
                   		<% end %> 
                   <% end %> 
              
@@ -22,7 +22,7 @@
                    <p> <%= f.password_field :password_confirmation%> </p>
                     <%=f.submit%>
           <% end %>
-        </div>
+        </div> 
     </div>
   </div>
 </div> 
