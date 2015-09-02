@@ -1,9 +1,12 @@
+<div class="beers-search__background-fix"></div>
+
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-xs-12 col-sm-8 col-sm-offset-2 beers-search__form-container">
+			
 			<h1>Here are your searches!</h1>
 			<form action="/beers" method="POST">
-				<button>Add Selected Beer to Tastings</button>
+				<button class="btn-primary beers-search__submit">Add Selected Beer to Tastings</button>
 				
 				<% @beers.each_with_index do |beer, i| %>
 				
