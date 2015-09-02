@@ -1,14 +1,18 @@
 
 <div class="beersshow__background"></div>
-<div class="beershow__container">
+
+
+
+<div class="beershow__container-fluid">
 	<div class="beersshow__beerdata">
-		<p><strong>Beer Name:</strong> <%= @beer.name %></p>
+		<h2><%= @beer.name %></h2>
 		<p><strong>Beer Description:</strong> <%= @beer.description %></p>
 		<p><strong>Beer ABV:</strong> <%= @beer.abv %>%</p>
 		<p><strong>Brewery:</strong> <%= @beer.brewery_name %></p>
 		<img src="<%= @beer.image_url %>">
 	</div>
 	<BR><BR>
+
 
 	<div class="beersshow__comments">
 		<h4>Comments:</h4>
@@ -17,12 +21,19 @@
 			<%= hidden_field_tag(:beer_id, @beer.id) %></br>
 			<%= submit_tag("Leave Comment") %>
 		<% end %>
+
 		<% @comments.each do |comment| %>
-			<div class="beersshow__comment">
-				<div class="commentauthor"><i><%= comment.user.name %>:</i></div>
-				<div class="beersshow__commentcontent"><%= comment.content %></div>
+			<div class="row beersshow__comment">
+				<div class="col-xs-3">
+					<img class="beersshow__authorpic" src="<%= comment.user.image_url %>" align="middle">
+				</div>
+				<div class="col-xs-9">
+					<div class="commentauthor"><i><%= comment.user.name %>:</i></div>
+					<div class="beersshow__commentcontent"><%= comment.content %></div>
+				</div>
 			</div>
 		<% end %>
+
 	</div>
 	</br>
 </div>
