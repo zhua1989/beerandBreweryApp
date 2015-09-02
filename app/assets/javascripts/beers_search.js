@@ -1,12 +1,13 @@
-var addClassToSelectedBeer = function () {
-    var $radios = $('.beers-search__radio');
-    $.each($radios, function (radio) {
-        if (radio.prop('checked')) {
-            radio.parent().parent().parent().addClass('beers-search__search-result__selected');
-        } else {
-            radio.parent().parent().parent().removeClass('beers-search__search-result__selected');
-        }
-    });
-};
+$(document).ready(function () {
+    console.log('linked afeaefae;foaij')
 
-$('.beers-search__form-container').on('click', addClassToSelectedBeer)
+    var addClassToSelectedBeer = function () {
+        console.log('something clicked')
+        $('.beers-search__radio').parent().parent().parent().removeClass('beers-search__search-result__selected')    
+        $('input:checked').parent().parent().parent().addClass('beers-search__search-result__selected');
+    };
+
+    $('.beers-search__form-container').on('click', function(e) {
+        addClassToSelectedBeer()
+    });    
+});
