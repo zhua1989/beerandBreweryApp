@@ -1,63 +1,31 @@
-<html>
-	<body>
 
-		<p>Beer Name: <%= @beer.name %></p>
+<div class="container">
+	<div class="beersshow__beerdata">
+		<div><p>Beer Name: <%= @beer.name %></p></div>
 		<p> Beer Description: <%= @beer.description %></p>
 		<p>Beer ABV.: <%= @beer.abv %></p>
-		<p><img src="<%= @beer.image_url %>"></p>
+		<div class="beerimage"><img src="<%= @beer.image_url %>"></div>
 		<p>Brewery: <%= @beer.brewery_name %></p>
-		<BR><BR>
+	</div>
+	<BR><BR>
 
-		<p>Comments:</p>
-		<% @comments.each do |comment| %>
-		<p><%= comment.content %></p>
-		<p>Author: <%= comment.user.name %></p>
-		<% end %>
-
+	<div class="comments">
+		<h4>Comments:</h4>
 		<p>Leave a comment:</p>
-
-
 			<%= form_tag("/comments", method: "post") do %>
 				<%= text_area_tag(:content) %>
 				<%= hidden_field_tag(:beer_id, @beer.id) %>
 				<%= submit_tag("Leave Comment") %>
 			<% end %>
-
-
-
-	</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		<% @comments.each do |comment| %>
+			<div class="comment">
+				<div class="commentauthor"><%= comment.user.name %>:</div>
+				<div class="commentcontent">
+					<div class="col-md-2"></div>
+					<div class="col-md-10"><%= comment.content %></div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+	</br>
+</div>
