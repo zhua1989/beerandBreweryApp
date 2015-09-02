@@ -30,3 +30,18 @@ a {
 	float: right;
 	padding: 1em;
 }
+
+.modal-content {
+    text-align: center;
+    box-shadow: 1px 1px 10px 5px black;
+    left: -200px;
+    width: 50%;
+    top: 6em;
+}
+
+#create {
+    left: -200px;
+    width: 50%;
+    top: 5em;
+}
+
