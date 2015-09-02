@@ -1,23 +1,40 @@
-<h2>Add a new account</h2>
-<h3>Enter a username and password to get started</h3>
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
 
-<%= form_for (@user) do |f| %>
+
+</head>
+<body>
+  <div class="modal show">
+    <div class="modal-dialog">
+      <div class="modal-content" id="create">
+        <div class="modal-header">
+          <h3 class="modal-title">Create a new account</h3>
+        </div>
+          <div class="modal-body">
+            <%= form_for (@user) do |f| %>
+                    <% if @user.errors.any? %> 
+                   		 	<% @user.errors.full_messages.each do |msg| %>
+                    			<h5 class="animated fadeInLeft"> <%= msg %></h5>
+                    		<% end %> 
+                    <% end %> 
+               
+                      <%= f.label :name%>
+                     <p> <%= f.text_field :name%> </p>
+                      <%= f.label :image_url%>
+                     <p> <%= f.text_field :image_url%> </p>
+                      <%= f.label :password%>
+                     <p> <%= f.password_field :password%> </p>
+                      <%= f.label :password_confirmation%>
+                     <p> <%= f.password_field :password_confirmation%> </p>
+                      <%=f.submit%>
+            <% end %>
+          </div> 
+      </div>
+    </div>
+  </div> 
+</body>
+</html>
 
 
-        <% if @user.errors.any? %> 
-       		 	<% @user.errors.full_messages.each do |msg| %>
-        			<h4> <%= msg %></h4>
-        		<% end %> 
-        <% end %> 
-   
-          <%= f.label :name%>
-          <%= f.text_field :name%>
-          <%= f.label :image_url%>
-          <%= f.text_field :image_url%>
-          <%= f.label :password%>
-          <%= f.password_field :password%>
-          <%= f.label :password_confirmation%>
-          <%= f.password_field :password_confirmation%>
-          <%=f.submit%>
-
-<% end %>

@@ -2,18 +2,33 @@
 <html>
 <head>
     <title></title>
+
 </head>
 <body>
-  <h1>Log In</h1>
+<%= audio_tag "beer_new.wav", class: "audio-play" %>
+<div class="modal show">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Log In Here</h3>
+      </div>
+        <div class="modal-body">
+          <%= form_tag "/sessions" do %>
+          <p> Enter your name: </p>
+          <p> <%= text_field_tag :name %> </p><br>
+          <p> Enter PW: </p>
+          <p> <%= password_field_tag :password %> </p><br>
+           <p id="log"> <%= submit_tag "log in" %> </p>
+          <% end %>
+        </div>
+    </div>
+  </div>
+</div>          
 
-  <%= form_tag "/sessions" do %>
-  Enter your name
-  <%= text_field_tag :name %>
-  Enter PW:
-  <%= password_field_tag :password %>
-  <%= submit_tag "log in" %>
-  <% end %>
+
+      
 
 
+    
 </body>
 </html>

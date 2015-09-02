@@ -42,12 +42,12 @@ class UsersController < ApplicationController
         puts("HELLO CAT")
       end
   end
-
+    ##Method for finding user ID when user wants to change avatar
     def edit
-      @user = User.find(session[:user_id])
+      
     end
 
-
+    ##Method for changing the avatar
     def update
        @user = User.find(session[:user_id])
        if logged_in? && check_current_user? 

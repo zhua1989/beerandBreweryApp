@@ -1,0 +1,54 @@
+.beersshow__background{
+  height: 100%;
+  width: 100%;
+  background-color: #FAF0E6;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.beershow__container-fluid{
+  width: 66.666666%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.beersshow__beerdata {
+  color: black;
+}
+
+.beersshow__beerdata img {
+  width: 50%;
+  height: auto;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.beersshow__comments {
+  padding: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#content{
+  width: 70%;
+}
+
+.beersshow__comment{
+  padding-top: 10px 
+}
+
+.beersshow__authorpic{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 125px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.beersshow__commentcontent {
+  text-indent: 50px;
+}

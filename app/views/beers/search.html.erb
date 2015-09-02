@@ -1,29 +1,47 @@
-<html>
-<head>
-	<title>Search</title>
-</head>
-<body>
-	<div class="header">
-		<h1>Here are your searches!</h1>
-	</div>
-	<div class="search">
-		<ul>
+<div class="beers-search__background-fix"></div>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12 col-sm-8 col-sm-offset-2 beers-search__form-container">
+			
+			<h1>Here are your searches!</h1>
 			<form action="/beers" method="POST">
+				<button class="btn-primary beers-search__submit">Add Selected Beer to Tastings</button>
+				
 				<% @beers.each_with_index do |beer, i| %>
-					<input type="radio" name="beer_id" value="<%=beer["id"]%>" <%= "checked" if i == 0 %> <%= "disabled" if @alreadyTasted[i] == true %> > <%= beer["name"] %>
-   			 		<input type="hidden" name="<%=beer["id"]%>_name" value="<%=beer["name"]%>">
-    				<input type="hidden" name="<%=beer["id"]%>_id" value="<%=beer["id"]%>">
-    				<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
-    				<input type="hidden" name="<%=beer["id"]%>_abv" value="<%=beer["abv"]%>">
-    				<input type="hidden" name="<%=beer["id"]%>_image_url" value="<%=beer["labels"]["large"] if beer["labels"] %>">
-    				<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"] if beer["breweries"] %>">
+				
+				<div class="row beers-search__search-result <%= "beers-search__search-result--disabled" if @alreadyTasted[i] == true %>">
+					<div class="col-sm-3">
+						
+						<label for="<%=beer["id"]%>" class="beers-search__label">
+							<img src="<%=beer["labels"] ? beer["labels"]["large"] : "http://www.therooster.com/sites/default/files/userfiles/images/snifter.jpg" %>" class="beers-search__beer-logo img-responsive img-rounded">
+							<input type="radio" name="beer_id" id="<%=beer["id"]%>" value="<%=beer["id"]%>" class="beers-search__radio"<%= "disabled" if @alreadyTasted[i] == true %> > 
+							
+					 	</label>
+						 	
+						
+					 	<input type="hidden" name="<%=beer["id"]%>_name" value="<%=beer["name"]%>">
+						<input type="hidden" name="<%=beer["id"]%>_id" value="<%=beer["id"]%>">
+						<input type="hidden" name="<%=beer["id"]%>_description" value="<%=beer["description"]%>">
+						<input type="hidden" name="<%=beer["id"]%>_abv" value="<%=beer["abv"]%>">
+						<input type="hidden" name="<%=beer["id"]%>_image_url" value="<%=beer["labels"]["large"] if beer["labels"] %>">
+						<input type="hidden" name="<%=beer["id"]%>_brewery_name" value="<%=beer["breweries"][0]["name"] if beer["breweries"] %>">
+					</div>
+					
+					<div class="col-sm-9">
+						<div class="beers-show__description-wrapper">
+							<div class="beers-show__description-container">
+								<h4><%= beer["name"] %> <%=" by #{beer["breweries"][0]["name"] if beer["breweries"]}"%> </h4><br> 
+								<p class="beers-search__description"><%=beer["description"] || "No description provided"%></p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				
 				<% end %>
 
-				<button>Add Selected Beer to Tastings</button>
 			</form>
-			<br>
-		</ul>
-	</div> 
-
-</body>
-</html>
+		</div>
+	</div>
+</div>
