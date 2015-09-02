@@ -1,0 +1,43 @@
+.beersshow__background{
+  height: 100%;
+  width: 100%;
+  background-color: #FAF0E6;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.beershow__container{
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.beersshow__beerdata {
+  color: black;
+}
+
+.beersshow__beerdata img {
+  width: 50%;
+  height: auto;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.beersshow__comments {
+  padding: 10px;
+  margin-left: 15%;
+}
+
+#content{
+  width: 70%;
+}
+
+.beersshow__comment{
+  padding-top: 10px 
+}
+
+.beersshow__commentcontent {
+  text-indent: 50px;
+}
