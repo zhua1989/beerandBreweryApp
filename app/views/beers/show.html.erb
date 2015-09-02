@@ -1,11 +1,11 @@
 
 <div class="container">
 	<div class="beersshow__beerdata">
-		<div><p>Beer Name: <%= @beer.name %></p></div>
+		<p>Beer Name: <%= @beer.name %></p>
 		<p> Beer Description: <%= @beer.description %></p>
 		<p>Beer ABV.: <%= @beer.abv %></p>
-		<div class="beerimage"><img src="<%= @beer.image_url %>"></div>
 		<p>Brewery: <%= @beer.brewery_name %></p>
+		<img src="<%= @beer.image_url %>">
 	</div>
 	<BR><BR>
 
@@ -20,11 +20,9 @@
 		<% @comments.each do |comment| %>
 			<div class="comment">
 				<div class="commentauthor"><%= comment.user.name %>:</div>
-				<div class="commentcontent">
-					<div class="col-md-2"></div>
-					<div class="col-md-10"><%= comment.content %></div>
-				</div>
+				<div class="beersshow__commentcontent"><%= comment.content %></div>
 			</div>
+			</br>
 		<% end %>
 	</div>
 	</br>
