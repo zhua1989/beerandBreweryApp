@@ -1,7 +1,13 @@
-body { background: url("https://i.imgur.com/XHGzOae.gif") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
+
+
+.backgroundgif{
+    background: url('https://i.imgur.com/XHGzOae.gif') center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    z-index: -1;
 }
 
 .welcome {
