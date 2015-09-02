@@ -13,8 +13,11 @@
  *= require bootstrap
  *= require_tree .
  *= require_self
+ *= require animate
+
  */
 
-body {
-	font-family: 'Libre Baskerville', serif;
-}
+ body {
+    font-family: 'Libre Baskerville', serif;
+ }
+
