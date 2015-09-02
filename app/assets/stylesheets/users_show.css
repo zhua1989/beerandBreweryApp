@@ -1,0 +1,31 @@
+
+
+.users__tasting_notes {
+	width: 70%;
+}
+
+.users__content {
+	background-color: #FAF0E6;
+	padding: 20px;
+	border-radius: 20px 
+}
+
+.users__header {
+	background-color: #FAF0E6;
+	padding: 20px;
+	border-radius: 20px 
+}
+
+.users__find {
+	background-color: #FAF0E6;
+	padding: 20px;
+	border-radius: 20px 
+}
+
+.users__profile {
+	margin: 0 auto
+}
+
+.users__field input {
+  width: 120px;
+}

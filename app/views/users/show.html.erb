@@ -1,48 +1,53 @@
-<html>
-<head>
-	<title>Profile Page</title>
-</head>
-<body>
-	<div class="header">
-		<h1>Welcome <%= @current_user.name %>!</h1>
-		<img src="<%= @current_user.image_url %>">
 
-		<h6>Change your avatar</h6>
-			<%= form_tag(user_path, method: "put") do %>
-				<%= text_field_tag :image %>
-				<%= submit_tag "Change" %>
-			<% end %>
-	</div>
-    
-    <div class="content">
-		<h2>Here are your beers</h2>
-		 <% @tastings.each do |tasting| %>
-		<div class="list">
-				<h3> <a href="/beers/<%= tasting.beer_id %>"> <%= tasting.beer.name %> </a></h3>
-				<strong>Tasting notes</strong>
-				<%= form_tag tasting_path(tasting.id), method: :put do %>
-					<%= text_area_tag :tasting_notes, tasting.tasting_notes %>
-					<br>
-					<%= submit_tag %>
-					<br>
-				<%= link_to 'Remove from profile', tasting_path(tasting.id), method: :delete %>
-				<% end %>
-			<% end %>
+<div class="container-fluid users__center ">
+	<div class="row-fluid" >
+      	<div class="col-sm-3 col-md-3 col-md-offset-2" >
+			<div class="users__header" >
+				<h1><%= @current_user.name %></h1>
+				<img src="<%= @current_user.image_url %>" class="img-responsive users__profile img-circle">
+
+				<h6>Change your avatar</h6>
+					<%= form_tag(user_path(session[:user_id]), method: "put") do %>
+						<div class="users__field">
+							<%= text_field_tag :image %><br>
+						</div>
+						<%= submit_tag "Change" %>
+					<% end %>
+			</div>
+    		<br>
 		</div>
-    </div>
-
-    <div class="find">
-    	<%= form_tag "/beers/search", method: :GET do %>
-    		<h4>Add a new beer!</h4>
-    		<p>Choose a search filter</p>
-    		<%= select_tag "filter", options_for_select([ "Top Results", "Only Name", "Only Description" ], "Top Results") %>
-    		<%= text_field_tag :search %>
-    		<%= submit_tag "Search for beer"%>
-
-    	<% end %>
-    </div>
-
-</body>
-</html>
-
-
+				<div class="col-sm-9 col-md-5">
+				    <div class="users__content">
+						<h1>Beer tasting notes:</h1>
+						<hr>
+						 <% @tastings.each do |tasting| %>
+						<div class="users__list">
+								<h3> <a href="/beers/<%= tasting.beer_id %>"> <%= tasting.beer.name %> </a></h3>
+								
+								<%= form_tag tasting_path(tasting.id), method: :put do %>
+									<%= text_area_tag :tasting_notes, tasting.tasting_notes, :class => 'users__tasting_notes' %>
+									<br>
+									<%= submit_tag %>
+									<br>
+								<%= link_to 'Remove', tasting_path(tasting.id), method: :delete %>
+								<hr>
+								<% end %>
+							<% end %>
+						</div>
+				    </div>
+				</div>
+			</div>
+		</div>
+			<br>
+		    <div class="users__find">
+		    	<%= form_tag "/beers/search", method: :GET do %>
+		    		<h3>Add a new beer</h3>
+		    		<%= select_tag "filter", options_for_select([ "Top Results", "Only Name", "Only Description" ], "Top Results") %>
+		    		<%= text_field_tag :search %>
+		    		<%= submit_tag "Search"%>
+		    	<% end %>
+		    </div>
+		</div>
+	</div>
+</div>
+<br><br><br>

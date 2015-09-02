@@ -38,7 +38,7 @@ class UsersController < ApplicationController
         @beers = @current_user.beers
         @tastings = @current_user.tastings
     else
-        redirect_to user_path(actual_user)
+        redirect_to user_path(session[:user_id])
         puts("HELLO CAT")
       end
   end
@@ -51,7 +51,8 @@ class UsersController < ApplicationController
     def update
        @user = User.find(session[:user_id])
        if logged_in? && check_current_user? 
-        @user.update(image_url: params[:image])
+        @user.image_url = params[:image]
+        @user.save(:validate => false)
         redirect_to user_path(@user)
       else
         redirect_to user_path(@user)
@@ -64,6 +65,7 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :password, :password_confirmation, :image_url)
+    params.permit(:image)
   end
 
 
