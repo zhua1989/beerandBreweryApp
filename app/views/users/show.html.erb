@@ -14,13 +14,15 @@
 						<%= submit_tag "Change" %>
 					<% end %>
 			</div>
-    		<br>
+			<br>
 		</div>
-				<div class="col-sm-9 col-md-5">
-				    <div class="users__content">
+		<div class="col-sm-9 col-md-5">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="users__content">
 						<h1>Beer tasting notes:</h1>
-						<hr>
-						 <% @tastings.each do |tasting| %>
+						
+						<% @tastings.each do |tasting| %>
 						<div class="users__list">
 								<h3> <a href="/beers/<%= tasting.beer_id %>"> <%= tasting.beer.name %> </a></h3>
 								
@@ -32,21 +34,26 @@
 								<%= link_to 'Remove', tasting_path(tasting.id), method: :delete %>
 								<hr>
 								<% end %>
-							<% end %>
 						</div>
-				    </div>
+						<% end %>
+					</div>
 				</div>
 			</div>
-		</div>
-			<br>
-		    <div class="users__find">
-		    	<%= form_tag "/beers/search", method: :GET do %>
-		    		<h3>Add a new beer</h3>
-		    		<%= select_tag "filter", options_for_select([ "Top Results", "Only Name", "Only Description" ], "Top Results") %>
-		    		<%= text_field_tag :search %>
-		    		<%= submit_tag "Search"%>
-		    	<% end %>
-		    </div>
+			<div class="users__spacer">
+			</div>
+			
+			<div class="row">
+				<div class="col-xs-12">
+			    	<div class="users__find">
+			    		<%= form_tag "/beers/search", method: :GET do %>
+				    		<h3>Add a new beer</h3>
+				    		<%= select_tag "filter", options_for_select([ "Top Results", "Only Name", "Only Description" ], "Top Results") %>
+				    		<%= text_field_tag :search %>
+				    		<%= submit_tag "Search"%>
+				    	<% end %>
+			    	</div>
+			    </div>
+			</div>
 		</div>
 	</div>
 </div>
