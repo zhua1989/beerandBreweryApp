@@ -20,6 +20,9 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="users__content">
+						<% flash.each do |name, msg| %>
+					      <%= content_tag :div, msg%>
+						<% end %>
 						<h1>Beer tasting notes:</h1>
 						
 						<% @tastings.each do |tasting| %>

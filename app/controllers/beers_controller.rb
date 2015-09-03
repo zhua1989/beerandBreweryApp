@@ -44,7 +44,7 @@ class BeersController < ApplicationController
         @alreadyTasted = @beers.map { |beer| beersUserTasted.include?(beer["id"]) }
       end # end if statement
     else
-      redirect_to user_path(session[:user_id], flash: { error: "no beers with matched: #{userQuery}" }) 
+      redirect_to user_path(session[:user_id], flash: { error: "no beers matched your search: #{userQuery}" }) 
     end
   end # end search method
 

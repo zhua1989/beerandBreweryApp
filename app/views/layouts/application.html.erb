@@ -13,12 +13,14 @@
 
 
 
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header navbar-brand">Chugg'd</div>
       <div class="margin-right">
-            <div><%=link_to("Your Beer Collection", user_path(session[:user_id])) %></div>
-            <div><%=link_to("Log Out", "/sessions", method: :delete) %></div>
+        <div>
+          <%=link_to("Your Beer Collection", user_path(session[:user_id]), :class => "profile") %>
+          <%=link_to("Log Out", "/sessions", method: :delete) %>
+        </div>
       </div> 
     </div>
   </nav>
